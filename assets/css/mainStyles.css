@@ -8,17 +8,6 @@ ul li{
     list-style: none;
 }
 
-html{
-    height: 100vh;
-}
-
-#parr{
-    
-}
-
-.card{
-}
-
 a:hover{
     text-decoration: none;
     color: #ffc107 !important;
@@ -56,8 +45,8 @@ a:hover{
 }
 
 .circuloExtraGrande{
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
 
 }
 
@@ -85,9 +74,16 @@ a:hover{
 }
 
 .circuloExtraGrande img{
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
 
+}
+
+/* Misc */
+.copy{
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
 
