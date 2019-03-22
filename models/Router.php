@@ -27,7 +27,25 @@ class Router{
     }
 
     public function navigate( $page ){
-        require_once "views/$page.php";
+        //require_once "views/$page.php";
+
+        if ( isset($_GET['controller']) ){
+            $controller = filter_var($_GET['controller'], FILTER_SANITIZE_STRING).'Controller';
+
+            if ( isset($_GET['action']) ){
+                $action = filter_var($_GET['action'], FILTER_SANITIZE_STRING);
+            } else {
+                $action = 'main';
+            }
+
+        } else {
+            $controller = 'mainController';
+            $action = 'main';
+        }
+
+        $ctrl = new $controller();
+        $ctrl->$action();
+
     }
 
     public function getBreadcrums(){

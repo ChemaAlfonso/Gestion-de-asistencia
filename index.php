@@ -1,4 +1,7 @@
 <?php     
+
+//Modulo de rutas
+require_once 'models/Router.php';
       
 require_once 'autoload.php';
 

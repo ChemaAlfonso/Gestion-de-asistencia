@@ -17,6 +17,9 @@ CREATE TABLE IF NOT EXISTS usuarios(
 CONSTRAINT pk_usuarios PRIMARY KEY (id)
 )Engine=InnoDB DEFAULT CHARSET = latin1;
 
+INSERT INTO `usuarios` (`id`, `nickname`, `nombre`, `apellidos`, `email`, `password`, `favoritos`, `role`, `img`) VALUES (NULL, 'asd', 'asd', 'asd', 'asd@asd.com', 'asd', 'asd', '0', 'https://cumbrepuebloscop20.org/wp-content/uploads/2018/08/squirrel-1407699_640-1.jpg');
+INSERT INTO `usuarios` (`id`, `nickname`, `nombre`, `apellidos`, `email`, `password`, `favoritos`, `role`, `img`) VALUES (NULL, 'qwe', 'qwe', 'qwe', 'qew@qwe.com', 'qwe', 'qwe', '0', 'https://cumbrepuebloscop20.org/wp-content/uploads/2018/08/squirrel-1407699_640-1.jpg');
+
 DROP TABLE IF EXISTS alumnos;
 CREATE TABLE IF NOT EXISTS alumnos(
     id        int(11) auto_increment,

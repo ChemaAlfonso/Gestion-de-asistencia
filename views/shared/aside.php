@@ -20,10 +20,11 @@
             <div class="row">
                 <div class="col-12 mainLinksContainer">
                     <ul>
-                        <li><a href="?route=shared/graficos">INICIO</a></li>
+                        <li><a href="?controller=main&action=main">INICIO</a></li>
                         <li><a href="?route=faltas/faltas">FALTAS</a></li>
                         <li><a href="?route=alumnos/alumnos">ALUMNOS</a></li>
                         <li><a href="?route=asignaturas/asignaturas">ASIGNATURAS</a></li>
+                        <li><a href="?controller=usuario&action=main">USUARIOS</a></li>
                     </ul>
                 </div>
             </div>

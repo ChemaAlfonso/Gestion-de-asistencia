@@ -1,7 +1,7 @@
 <?php
 
 function autoloadApp( $class ){
-    include 'models/'. $class . '.php';
+    include 'controllers/'. $class . '.php';
 }
 
 spl_autoload_register( 'autoloadApp' );

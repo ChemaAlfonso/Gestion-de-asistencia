@@ -15,10 +15,10 @@
 
                                         <div class="col-6">
                                             <div class="p-2">
-                                                <h5>Top Total</h5>
-                                                <p>Nombre: </p>
-                                                <p>Apellidos: </p>
-                                                <p>Faltas: </p>
+                                                <h5 class="font-weight-bold">Top Total</h5>
+                                                <p class="font-italic">Nombre: </p>
+                                                <p class="font-italic">Apellidos: </p>
+                                                <p class="font-italic">Faltas: </p>
                                             </div>
                                         </div>
 
@@ -69,10 +69,10 @@
 
                                         <div class="col-6">
                                             <div class=" text-left p-2">
-                                                <h5>Top Alumnos</h5>
-                                                <p>Nombre: </p>
-                                                <p>Apellidos: </p>
-                                                <p>Faltas: </p>
+                                                <h5 class="font-weight-bold">Top Alumnos</h5>
+                                                <p class="font-italic">Nombre: </p>
+                                                <p class="font-italic">Apellidos: </p>
+                                                <p class="font-italic">Faltas: </p>
                                             </div>
                                         </div>
 
@@ -127,10 +127,10 @@
 
                                         <div class="col-6">
                                             <div class=" text-left p-2">
-                                                <h5>Top Asignaturas</h5>
-                                                <p>Nombre: </p>
-                                                <p>Horas: </p>
-                                                <p>Faltas: </p>
+                                                <h5 class="font-weight-bold">Top Asignaturas</h5>
+                                                <p class="font-italic">Nombre: </p>
+                                                <p class="font-italic">Horas: </p>
+                                                <p class="font-italic">Faltas: </p>
                                             </div>
                                         </div>
 
@@ -181,10 +181,10 @@
 
                                         <div class="col-6">
                                             <div class=" text-left p-2">
-                                                <h5>Top Total</h5>
-                                                <p>Nombre: </p>
-                                                <p>Apellidos: </p>
-                                                <p>Faltas: </p>
+                                                <h5 class="font-weight-bold">Top Total</h5>
+                                                <p class="font-italic">Nombre: </p>
+                                                <p class="font-italic">Apellidos: </p>
+                                                <p class="font-italic">Faltas: </p>
                                             </div>
                                         </div>
 
