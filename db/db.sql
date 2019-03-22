@@ -11,6 +11,7 @@ CREATE TABLE IF NOT EXISTS usuarios(
     apellidos varchar(150),
     email     varchar(200),
     password  varchar(255),
+    favoritos  varchar(255),
     role      int(1) DEFAULT 1,
     img       varchar(255),
 CONSTRAINT pk_usuarios PRIMARY KEY (id)

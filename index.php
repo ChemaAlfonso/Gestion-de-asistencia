@@ -1,139 +1,30 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
-     <!-- Local -->
-    <link rel="stylesheet" href="./assets/css/mainStyles.css" type="text/css">
+<?php     
+      
+require_once 'autoload.php';
 
-     <!-- Font awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <title>Faltas de asistencia</title>
-</head>
-<body>
-    
-    <!-- Main container -->
-    <div class="container-fluid blackBg vh-100">
-        <div class="row">
+if ( !empty( $_SESSION['user'] ) ){
 
-            <!-- 1st Big col -->
-            <div class="col-1 text-white text-center blackDarkBg py-3 vh-100">
-                <p class="fas fa-star display-4 text-warning"></p>
+    $usr = filter_var( $_SESSION['user'], FILTER_SANITIZE_STRING );
 
-                <!-- favsList -->
-                <div class="row">
-                    <div class="col-12 py-2">
-                        <div class="circulo">
-                            <a href="">
-                                <img src="https://picsum.photos/200/200?image=3" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
+} else {
+    $usr = null;
+}
 
-                <div class="row">
-                    <div class="col-12 py-2">
-                        <div class="circulo">
-                            <a href="">
-                                <img src="https://picsum.photos/200/200?image=4" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-12 py-2">
-                        <div class="circulo">
-                            <a href="">
-                                <img src="https://picsum.photos/200/200/?random?image=2" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div><!-- End 1st Big col -->
-
-            <!-- 2nd Big col -->
-            <div class="col-2 text-white text-center sidebar py-3  vh-100">
-                <div class="container-fluid">
-
-                    <!-- Logo -->
-                    <div class="row">
-                        <div id="favLogoText" class="col-12">
-                            <div class="circulo circuloExtraGrande">
-                                <a href="">
-                                    <img src="https://picsum.photos/200/200?image=8" alt="">
-                                </a>
-                            </div>
-                                <p class="mt-2">Chema Alfonso</p>
-                        </div>
-                    </div>
-
-                    <!-- Enlaces principales -->
-                    <div class="row">
-                        <div class="col-12 mainLinksContainer">
-                            <ul>
-                                <li><a href="#">INICIO</a></li>
-                                <li><a href="#">FALTAS</a></li>
-                                <li><a href="#">ALUMNOS</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="row copy">
-                        <div class="col-12">
-                            <a class="text-white" target="_blank" href="https://github.com/ChemaAlfonso/Gestion-de-asistencia"> 
-                               <p> Por: Chema Alfonso</p>
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-            </div><!-- End 2nd Big col -->
-
-            <!-- 3rd Big col -->
-            <div class="col-9 blackBg mainBody py-3  vh-100">
-
-                <!-- Big container 3 -->
-                <div class="container-fluid">
-
-                <!-- Breadcrums -->
-                <div class="row">
-                    <div class="col-12">
-                        <nav class="breadcrumb text-white">
-                            <a class="breadcrumb-item" href="#">Pagina 1</a>
-                            <a class="breadcrumb-item" href="#">Pagina 2</a>
-                            <span class="breadcrumb-item active"></span>
-                        </nav>
-                    </div>
-                </div>
-
-                <!-- Pages -->
-                <div class="container-fluid bg-white">
-                    <?php require_once('views/shared/main.php'); ?>
-                </div>
-                <!-- End Pages -->
+/* Header */
+require_once 'views/shared/header.php'; 
 
 
-            </div><!-- End big container 3 -->
-        </div><!-- End big col 3 -->
+/* 1st Big col (FAVS) */
+     require_once 'views/shared/favs.php'; 
+/* End 1st Big col */
 
-    </div><!-- End main row -->
+/* 2nd Big col (Aside)*/
+     require_once 'views/shared/aside.php'; 
+/* End 2nd Big col */
 
-</div><!-- End main container -->
+/* 3rd Big col (Main Content) */
+     require_once 'views/shared/main.php'; 
+/* End big container 3 */
 
 
-
-
-
- <!-- Bootstrap -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-</body>
-</html>
+ require_once 'views/shared/footer.php'; 

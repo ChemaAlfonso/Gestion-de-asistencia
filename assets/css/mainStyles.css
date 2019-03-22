@@ -8,6 +8,10 @@ ul li{
     list-style: none;
 }
 
+a{
+    transition: all .3s;
+}
+
 a:hover{
     text-decoration: none;
     color: #ffc107 !important;
@@ -83,7 +87,7 @@ a:hover{
 .copy{
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: 2em;
 }
 
 
