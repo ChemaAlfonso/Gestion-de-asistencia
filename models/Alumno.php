@@ -19,6 +19,7 @@ class Alumno extends Db{
     {
         if ( $this->seleccionar("SELECT * FROM alumnos WHERE id = $id") )
         {
+            $this->id            = $this->filas[0]->id;
             $this->nombre        = $this->filas[0]->nombre;
             $this->matricula     = $this->filas[0]->matricula;
             $this->apellidos     = $this->filas[0]->apellidos;

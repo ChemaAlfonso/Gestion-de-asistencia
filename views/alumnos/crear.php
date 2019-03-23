@@ -1,48 +1,65 @@
 <div class="row">
 
-    <div class="col-5 viewItemImgContainer">
-        <img class="viewItemImg" src="https://picsum.photos/500/600?image=12" alt="">
+    <div class="col-5">
+        <div class="viewItemImgContainer m-auto overflow-hidden">
+            <img class="viewItemImg img-fluid" src="<?= isset($alumnoEdit) ? $alumnoEdit->filas[0]->img : 'https://picsum.photos/500/600?image=12' ?>" alt="<?= isset($alumnoEdit) ? $alumnoEdit->filas[0]->nombre : '' ?>">
+        </div>
     </div>
 
     <div class="col-6 ">
 
         <div class="row">
             <div class="col-12 ">
-                <h2>Nuevo alumno</h2>
+                    <div class="row">
+                        <div class="col-12">
 
-                <form action="">
+                            
+                        <div class="col-6  justify-content-center">
+                            <h2><?= isset($alumnoEdit) ? 'Modificar alumno' : 'Nuevo alumno' ?></h2>
+                        </div>
+                
+                    
+                        <div class="col-3 offset-9 justify-content-center">
+                            <a class="d-block my-3 btn btn-danger" href="index.php?controller=alumno&action=main">Volver</a>
+                        </div>
+
+                        </div>
+                    </div>
+
+                <form action="<?= isset($alumnoEdit) ? "index.php?controller=alumno&action=create&edit=true" :"index.php?controller=alumno&action=create"?>" method="POST" enctype="multipart/form-data">
 
                     <div class="form-row">
-
                         <div class="col">
                             <label for="nombre">Nombre</label>
-                            <input class="form-control" name="nombre" type="text" required>
+                            <input class="form-control" name="nombre" type="text" value="<?= isset($alumnoEdit) ? $alumnoEdit->filas[0]->nombre : '' ?>" required>
                         </div>
+                            <input name="id" type="hidden" value="<?= isset($alumnoEdit) ? $alumnoEdit->filas[0]->id : '' ?>">
 
                         <div class="col">
                             <label for="apellido">Apellidos</label>
-                            <input class="form-control" name="apellido" type="text" required>
+                            <input class="form-control" name="apellidos" type="text" value="<?= isset($alumnoEdit) ? $alumnoEdit->filas[0]->apellidos : '' ?>" required>
                         </div>
 
                     </div>
 
                     <div class="form-group">
                         <label for="matricula">Matricula</label>
-                        <input class="form-control" name="matricula" type="text" required>
+                        <input class="form-control" name="matricula" type="text" value="<?= isset($alumnoEdit) ? $alumnoEdit->filas[0]->matricula : '' ?>" required>
                     </div>
 
                     <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="validatedCustomFile" required>
-                        <label class="custom-file-label" for="validatedCustomFile">Elija una imagen...</label>
+                        <input type="file" class="custom-file-input" name="img" value="<?= isset($alumnoEdit) ? $alumnoEdit->filas[0]->img : '' ?>" id="img">
+                        <label class="custom-file-label" for="img">Elija una imagen...</label>
                     </div>
 
                     <div class="col-12 text-center mt-3">
-                        <input class="btn btn-primary" type="submit" value="Aceptar" >
+                        <input class="btn btn-primary" type="submit" value="<?= isset($alumnoEdit) ? 'Modificar' : 'Crear' ?>" >
                     </div>
                     
                 </form>
             </div>
         </div>
+            
 
     </div>
 

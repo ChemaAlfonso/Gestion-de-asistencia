@@ -69,6 +69,7 @@ a:hover{
 .circulo img{
     height: 50px;
     min-width: 50px;
+    margin: auto;
 }
 
 .circulo:hover,
@@ -147,6 +148,20 @@ a:hover{
 header p{
     color:#343a40;
     font-size: 2.3em;
+}
+
+
+/***************************
+         Views 
+****************************/
+
+.viewItemImgContainer{
+    width: 500px;
+    height: 600px;
+    position: relative;
+}
+
+.viewItemImg{
 }
 
 

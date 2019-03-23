@@ -23,9 +23,11 @@
                         </div>
 
                         <div class="col-6">
-                            <div class="circulo circuloExtraGrande mt-4">
-                                <img src="<?= $almnTopOne->img ?>" alt="<?= $almnTopOne->nombre ?>" title="<?= $almnTopOne->nombre . ' ' . $almnTopOne->apellidos ?>">
-                            </div>
+                            <a href="index.php?controller=alumno&action=edit&id=<?= $almnTopOne->id; ?>">
+                                <div class="circulo circuloExtraGrande mt-4">
+                                    <img src="<?= $almnTopOne->img ?>" alt="<?= $almnTopOne->nombre ?>" title="<?= $almnTopOne->nombre . ' ' . $almnTopOne->apellidos ?>">
+                                </div>
+                            </a>
                         </div>
 
                         <?php endforeach;?>
@@ -39,9 +41,11 @@
                         <?php $alumno->AlumnoUnico( $falton ); ?>
                         
                         <div class="col-3">
-                            <div class="circulo circuloGrande">
-                                <img src="<?= $alumno->img ?>" alt="<?= $alumno->nombre ?>" title="<?= $alumno->nombre . ' ' . $alumno->apellidos ?>">
-                            </div>
+                            <a href="index.php?controller=alumno&action=edit&id=<?= $alumno->id; ?>">
+                                <div class="circulo circuloGrande">
+                                    <img src="<?= $alumno->img ?>" alt="<?= $alumno->nombre ?>" title="<?= $alumno->nombre . ' ' . $alumno->apellidos ?>">
+                                </div>
+                            </a>
                         </div>
 
 
@@ -71,7 +75,7 @@
 
                         <div class="col-6">
                             <div class="circulo circuloExtraGrande mt-4">
-                                <img src="<?= $asignTopOne->img ?>" alt="<?= $asignTopOne->nombre ?>" title="<?= $asignTopOne->nombre . ' ' . $asignTopOne->apellidos ?>">
+                                <img src="<?= $asignTopOne->img ?>" alt="<?= $asignTopOne->nombre ?>" title="<?= $asignTopOne->nombre . ' - ' . $asignTopOne->codigo ?>">
                             </div>
                         </div>
 
@@ -86,9 +90,11 @@
                         <?php $asignatura->AsignaturaUnica( $faltada ); ?>
                         
                         <div class="col-3">
-                            <div class="circulo circuloGrande">
-                                <img src="<?= $asignatura->img ?>" alt="<?= $asignatura->nombre ?>" title="<?= $asignatura->nombre . ' ' . $asignatura->apellidos ?>">
-                            </div>
+                            <a href="index.php?controller=asignatura&action=edit&id=<?= $asignatura->id; ?>">
+                                <div class="circulo circuloGrande">
+                                    <img src="<?= $asignatura->img ?>" alt="<?= $asignatura->nombre ?>" title="<?= $asignatura->nombre . ' - ' . $asignatura->codigo ?>">
+                                </div>
+                            </a>
                         </div>
 
 
@@ -121,9 +127,11 @@
                         </div>
 
                         <div class="col-6">
-                            <div class="circulo circuloExtraGrande mt-4">
-                                <img src="<?= $almnTopRandOne->img ?>" alt="<?= $almnTopRandOne->nombre ?>" title="<?= $almnTopRandOne->nombre . ' ' . $almnTopRandOne->apellidos ?>">
-                            </div>
+                            <a href="index.php?controller=alumno&action=edit&id=<?= $almnTopRandOne->id; ?>">
+                                <div class="circulo circuloExtraGrande mt-4">
+                                    <img src="<?= $almnTopRandOne->img ?>" alt="<?= $almnTopRandOne->nombre ?>" title="<?= $almnTopRandOne->nombre . ' ' . $almnTopRandOne->apellidos ?>">
+                                </div>
+                            </a>
                         </div>
 
                         <?php endforeach;?>
@@ -132,14 +140,17 @@
                     <!-- miniaturas -->
                     <div class="row justify-content-center mt-5">
 
-                    <?php foreach($alumnos as $falton):?>
+                    <?php foreach($alumnosRand as $faltonRand):?>
 
-                        <?php $alumno->AlumnoUnico( $falton ); ?>
+                        
+                    <?php $alumnoRand->AlumnoUnico( $faltonRand ); ?>
                         
                         <div class="col-3">
-                            <div class="circulo circuloGrande">
-                                <img src="<?= $alumno->img ?>" alt="<?= $alumno->nombre ?>" title="<?= $alumno->nombre . ' ' . $alumno->apellidos ?>">
-                            </div>
+                            <a href="index.php?controller=alumno&action=edit&id=<?= $alumnoRand->id; ?>">
+                                <div class="circulo circuloGrande">
+                                    <img src="<?= $alumnoRand->img ?>" alt="<?= $alumnoRand->nombre ?>" title="<?= $alumnoRand->nombre . ' ' . $alumnoRand->apellidos ?>">
+                                </div>
+                            </a>
                         </div>
 
 
@@ -169,7 +180,7 @@
 
                         <div class="col-6">
                             <div class="circulo circuloExtraGrande mt-4">
-                                <img src="<?= $asignTopRandOne->img ?>" alt="<?= $asignTopRandOne->nombre ?>" title="<?= $asignTopRandOne->nombre . ' ' . $asignTopRandOne->apellidos ?>">
+                                <img src="<?= $asignTopRandOne->img ?>" alt="<?= $asignTopRandOne->nombre ?>" title="<?= $asignTopRandOne->nombre . ' - ' . $asignTopRandOne->codigo ?>">
                             </div>
                         </div>
 
@@ -185,7 +196,7 @@
                         
                         <div class="col-3">
                             <div class="circulo circuloGrande">
-                                <img src="<?= $asignaturaRand->img ?>" alt="<?= $asignaturaRand->nombre ?>" title="<?= $asignatura->nombre . ' ' . $asignatura->apellidos ?>">
+                                <img src="<?= $asignaturaRand->img ?>" alt="<?= $asignaturaRand->nombre ?>" title="<?= $asignaturaRand->nombre . ' - ' . $asignaturaRand->codigo ?>">
                             </div>
                         </div>
 

@@ -66,11 +66,11 @@ CONSTRAINT pk_alumnos PRIMARY KEY (id)
 
 /* Inserts de alumnos */
 
-INSERT INTO `alumnos` (`id`, `matricula`, `nombre`, `apellidos`, `img`) VALUES (NULL, '1', 'Javier', 'Hernandez', 'https://coubsecure-s.akamaihd.net/get/b194/p/coub/simple/cw_timeline_pic/b8265da4e8c/2c0298fa74a8aaaada31a/big_1529232326_image.jpg');
+INSERT INTO `alumnos` (`id`, `matricula`, `nombre`, `apellidos`, `img`) VALUES (NULL, '1', 'Sofía', 'Alarcón', 'https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?cs=srgb&dl=beautiful-blur-blurred-background-733872.jpg&fm=jpg');
 INSERT INTO `alumnos` (`id`, `matricula`, `nombre`, `apellidos`, `img`) VALUES (NULL, '2', 'David', 'Segundo', 'https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2018/06/01/15278540247774.jpg');
 INSERT INTO `alumnos` (`id`, `matricula`, `nombre`, `apellidos`, `img`) VALUES (NULL, '3', 'Leo', 'Messi', 'https://www.mundodeportivo.com/r/GODO/MD/p5/MasQueDeporte/Imagenes/2018/10/24/Recortada/img_femartinez_20181010-125104_imagenes_md_otras_fuentes_captura-kcOG-U452531892714hYG-980x554@MundoDeportivo-Web.JPG');
 INSERT INTO `alumnos` (`id`, `matricula`, `nombre`, `apellidos`, `img`) VALUES (NULL, '4', 'Jose', 'Rodriguez', './assets/img/alumnos/profile/alumno1.jpg');
-INSERT INTO `alumnos` (`id`, `matricula`, `nombre`, `apellidos`, `img`) VALUES (NULL, '5', 'Maria', 'Antón', './assets/img/alumnos/profile/alumno2.jpg');
+INSERT INTO `alumnos` (`id`, `matricula`, `nombre`, `apellidos`, `img`) VALUES (NULL, '5', 'Maria', 'Antón', 'http://blogspay.com/wp-content/uploads/2018/07/istock-526142422.jpg');
 INSERT INTO `alumnos` (`id`, `matricula`, `nombre`, `apellidos`, `img`) VALUES (NULL, '6', 'Juan', 'Jose', './assets/img/alumnos/profile/alumno3.jpg');
 
 
@@ -117,7 +117,7 @@ CONSTRAINT fk_faltas_asignaturas FOREIGN KEY (asignatura_id) REFERENCES asignatu
 
 INSERT INTO `faltas` (`alumno_id`, `asignatura_id`, `dia`, `horas`) VALUES ('1', '1', '2019-08-26', '2'), ('1', '3', '2019-03-12', '3');
 INSERT INTO `faltas` (`alumno_id`, `asignatura_id`, `dia`, `horas`) VALUES ('3', '1', '2019-07-01', '12'), ('2', '2', '2019-05-22', '8');
-INSERT INTO `faltas` (`alumno_id`, `asignatura_id`, `dia`, `horas`) VALUES ('3', '4', '2019-03-11', '9'), ('3', '3', '2019-03-12', '3');
-INSERT INTO `faltas` (`alumno_id`, `asignatura_id`, `dia`, `horas`) VALUES ('5', '2', '2019-03-20', '42');
+INSERT INTO `faltas` (`alumno_id`, `asignatura_id`, `dia`, `horas`) VALUES ('4', '4', '2019-03-11', '9'), ('3', '3', '2019-03-12', '3');
+INSERT INTO `faltas` (`alumno_id`, `asignatura_id`, `dia`, `horas`) VALUES ('5', '2', '2019-03-20', '16');
 INSERT INTO `faltas` (`alumno_id`, `asignatura_id`, `dia`, `horas`) VALUES ('2', '6', '2019-03-27', '15');
-INSERT INTO `faltas` (`alumno_id`, `asignatura_id`, `dia`, `horas`) VALUES ('6', '5', '2019-02-14', '9');
+INSERT INTO `faltas` (`alumno_id`, `asignatura_id`, `dia`, `horas`) VALUES ('6', '5', '2019-02-14', '29');

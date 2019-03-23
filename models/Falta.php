@@ -18,7 +18,7 @@ class Falta extends Db{
 
     public function FaltaUnica( $id )
     {
-        if ( $this->seleccionar("SELECT * FROM faltas WHERE id = $id") )
+        if ( $this->seleccionar("SELECT * FROM faltas WHERE alumno_id = $id") )
         {
             $this->alumno_id     = $this->filas[0]->alumno_id;
             $this->asignatura_id = $this->filas[0]->asignatura_id;
@@ -34,7 +34,7 @@ class Falta extends Db{
     
     public function remove( $id )
     {
-        return $this->ejecutar("DELETE FROM faltas WHERE id = $id");
+        return $this->ejecutar("DELETE FROM faltas WHERE alumno_id = $id");
     }
 
     public function create()
