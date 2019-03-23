@@ -12,9 +12,9 @@ class Alumno extends Db{
 
     public function Alumnos()
     {
-        return $this->seleccionar("SELECT * FROM alumnos");
+        return $this->seleccionar("SELECT * FROM alumnos ORDER BY nombre");
     }
-
+    
     public function AlumnoUnico( $id )
     {
         if ( $this->seleccionar("SELECT * FROM alumnos WHERE id = $id") )

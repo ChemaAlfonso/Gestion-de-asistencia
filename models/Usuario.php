@@ -16,7 +16,17 @@ class Usuario extends Db{
 
     public function Usuarios()
     {
-        return $this->seleccionar("SELECT * FROM usuarios");
+        return $this->seleccionar("SELECT u.*, r.nombre as rol FROM usuarios u INNER JOIN roles r ON u.role_id = r.code ORDER BY nombre");
+    }
+
+    public function usuariosLimit()
+    {
+        return $this->seleccionar("SELECT u.*, r.nombre as rol FROM usuarios u INNER JOIN roles r ON u.role_id = r.code ORDER BY nombre LIMIT 4");
+    }
+    
+    public function usuariosTop()
+    {
+        return $this->seleccionar("SELECT u.*, r.nombre as rol FROM usuarios u INNER JOIN roles r ON u.role_id = r.code ORDER BY nombre LIMIT 1");
     }
 
     public function UsuarioUnico( $id )

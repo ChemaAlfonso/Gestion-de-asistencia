@@ -4,7 +4,7 @@
     <table class="table text-center">
         <thead class="thead-dark">
             <tr scope=row>
-                <th>Img</th>
+                <th></th>
                 <th>Usuario</th>
                 <th>Nombre</th>
                 <th>email</th>
@@ -12,17 +12,17 @@
                 <th></th>      
             </tr>
         </thead>
-        <?php foreach ($usr->filas as $fila):?>
+        <?php foreach ($usr->filas as $fila):?>        
             <tr scope=row>
                 <td class=" align-middle">
                     <div class="circulo">
-                        <img src="https://picsum.photos/200/200?image=22" alt="">
+                        <img src="<?= $fila->img; ?>" alt="<?= $fila->nickname; ?>" title="<?= $fila->nickname; ?>">
                     </div>
                 </td>
                 <td class=" align-middle"><?= $fila->nickname; ?></td>
                 <td class=" align-middle"><?= $fila->nombre; ?></td>
                 <td class=" align-middle"><?= $fila->email; ?></td>
-                <td class=" align-middle"><?= $fila->role; ?></td> 
+                <td class=" align-middle"><?= $fila->rol; ?></td> 
                 <td class=" align-middle">
                       <a href="" class="far fa-edit modificador"></a>
                       <a href="" class="fas fa-trash-alt borrador"></a>

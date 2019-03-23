@@ -4,7 +4,7 @@
     <table class="table text-center">
         <thead class="thead-dark">
             <tr scope="row">
-                <th scope="col">Img</th>
+                <th scope="col"></th>
                 <th scope="col">Código</th>
                 <th scope="col">Nombre</th>
                 <th scope="col">Horas</th> 
@@ -16,7 +16,7 @@
             <tr scope="row">
                 <td scope="col" class=" align-middle">
                     <div class="circulo">
-                        <img src="<?= $fila->img; ?>" alt="">
+                        <img src="<?= $fila->img; ?>" alt="<?= $fila->nombre; ?>" title="<?= $fila->nombre; ?>">
                     </div>
                 </td>
                 <td scope="col" class=" align-middle"><?= $fila->codigo; ?></td>

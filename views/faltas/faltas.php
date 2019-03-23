@@ -4,7 +4,7 @@
     <table class="table text-center">
         <thead class="thead-dark">
             <tr scope=row> 
-                <th>img</th>
+                <th></th>
                 <th>Alumno</th>
                 <th>Asignatura</th>
                 <th>Dia</th>
@@ -16,11 +16,11 @@
             <tr scope=row>
                 <td class=" align-middle">
                     <div class="circulo">
-                        <img src="https://cdn-tipsforlawyer.pressidium.com/wp-content/uploads/2014/05/made-a-mistake.jpg" alt="">
+                        <img src="<?= $fila->fotoAlumno; ?>" alt="<?= $fila->nombreAlumno; ?>" title="<?= $fila->nombreAlumno; ?>">
                     </div>
                 </td>
-                <td class=" align-middle"><?= $fila->alumno_id; ?></td>
-                <td class=" align-middle"><?= $fila->asignatura_id; ?></td>
+                <td class=" align-middle"><?= $fila->nombreAlumno; ?></td>
+                <td class=" align-middle"><?= $fila->nombreAsignatura; ?></td>
                 <td class=" align-middle"><?= $fila->dia; ?></td> 
                 <td class=" align-middle"><?= $fila->horas; ?></td> 
                 <td class=" align-middle">

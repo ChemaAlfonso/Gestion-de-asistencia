@@ -11,7 +11,9 @@ class Falta extends Db{
 
     public function Faltas()
     {
-        return $this->seleccionar("SELECT * FROM faltas");
+        return $this->seleccionar( 'SELECT f.*, al.nombre AS nombreAlumno, asig.nombre as nombreAsignatura, al.img as fotoAlumno FROM faltas f 
+                                    INNER JOIN alumnos al ON f.alumno_id = al.id
+                                    INNER JOIN asignaturas asig ON f.asignatura_id = asig.id ORDER BY f.dia DESC' );
     }
 
     public function FaltaUnica( $id )
@@ -29,7 +31,7 @@ class Falta extends Db{
         return false;
 
     }
-
+    
     public function remove( $id )
     {
         return $this->ejecutar("DELETE FROM faltas WHERE id = $id");
@@ -56,4 +58,42 @@ class Falta extends Db{
 
         return $this->ejecutar( $sql );
     }
+  
+
+    /* Gestión de alumnos */
+
+    public function alumnoMasFalton(){
+        return $this->seleccionar("SELECT alumno_id, SUM(horas) as 'horas' FROM faltas GROUP BY alumno_id ORDER BY horas DESC  LIMIT 1");
+    }
+
+    
+    public function alumnosMasFaltones(){
+        return $this->seleccionar("SELECT alumno_id, SUM(horas) as 'horas' FROM faltas GROUP BY alumno_id ORDER BY horas DESC  LIMIT 1, 4");
+    }
+    
+    public function FaltasAlumnoTotal( $id )
+    {
+        return $this->seleccionar( "SELECT alumno_id,SUM(horas) as 'horas' FROM faltas WHERE alumno_id = $id;" );
+    }
+
+    /* Gestión de asignaturas */
+
+    public function asignaturaMasFaltada(){
+        return $this->seleccionar("SELECT asignatura_id, SUM(horas) as 'horas' FROM faltas GROUP BY asignatura_id ORDER BY horas DESC  LIMIT 1");
+    }
+
+    
+    public function asignaturasMasFaltadas(){
+        return $this->seleccionar("SELECT asignatura_id, SUM(horas) as 'horas' FROM faltas GROUP BY asignatura_id ORDER BY horas DESC  LIMIT 1, 4");
+    }
+    
+    public function FaltasAsignaturaTotal( $id )
+    {
+        return $this->seleccionar( "SELECT asignatura_id,SUM(horas) as 'horas' FROM faltas WHERE asignatura_id = $id;" );
+    }
+
+
+
+
+
 }

@@ -13,16 +13,16 @@ class Asignatura extends Db{
 
     public function Asignaturas()
     {
-        return $this->seleccionar("SELECT * FROM asignaturas");
+        return $this->seleccionar("SELECT * FROM asignaturas ORDER BY codigo");
     }
 
     public function AsignaturaUnica( $id )
     {
         if ( $this->seleccionar("SELECT * FROM asignaturas WHERE id = $id") )
         {
+            $this->codigo        = $this->filas[0]->codigo;
             $this->nombre        = $this->filas[0]->nombre;
-            $this->matricula     = $this->filas[0]->matricula;
-            $this->apellidos     = $this->filas[0]->apellidos;
+            $this->horas         = $this->filas[0]->horas;
             $this->curso         = $this->filas[0]->curso;
             $this->img           = $this->filas[0]->img;
 
@@ -41,22 +41,22 @@ class Asignatura extends Db{
     public function create()
     {
         $sql = "INSERT INTO asignaturas VALUES ( null,
-                                            '$this->matricula',
+                                            '$this->codigo',
                                             '$this->nombre',
-                                            '$this->apellidos', 
+                                            '$this->horas',
                                             '$this->curso', 
-                                            '$this->img' );";
+                                            '$this->img');";
 
         return $this->ejecutar( $sql );
     }
 
     public function update()
     {
-        $sql = "UPDATE asignaturas SET  matricula   = '$this->matricula',
-                                    nombre      = '$this->nombre',
-                                    apellidos   = '$this->apellidos', 
-                                    curso       = '$this->curso', 
-                                    img         = '$this->img' 
+        $sql = "UPDATE asignaturas SET  codigo      = '$this->codigo',
+                                        nombre      = '$this->nombre',
+                                        horas       = '$this->horas', 
+                                        curso       = '$this->curso', 
+                                        img         = '$this->img' 
                 WHERE id = $this->id;";
 
         return $this->ejecutar( $sql );

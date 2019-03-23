@@ -15,6 +15,25 @@
             </div>
         </div>
 
+        <!-- Buscador -->
+        <div class="row">
+            <div class="col-12 search">
+
+                <form action="?controller=search&action=main">
+                    <div class="form-group">
+                        <label for="search"></label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fas fa-search"></i></div>
+                            </div>
+                            <input type="text" class="form-control" name="search"  placeholder="Buscar...">
+                        </div>    
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
         <!-- Enlaces principales -->
         <div class="row">
             <div class="col-12 mainLinksContainer">
@@ -28,6 +47,7 @@
             </div>
         </div>
 
+        <!-- Copy -->
         <div class="row copy">
             <div class="col-12">
                 <a class="text-white" target="_blank" href="https://github.com/ChemaAlfonso/Gestion-de-asistencia"> 

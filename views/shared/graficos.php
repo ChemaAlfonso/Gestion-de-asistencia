@@ -1,6 +1,4 @@
 
-
-
                 <!-- Cards Row -->
                 <div class="row">
                     <div class="col-12 bg-white">
@@ -13,55 +11,46 @@
                                     <!-- Texto y foto principal -->
                                     <div class="row h-50">
 
+                                    <?php foreach($almnTop->filas as $almnTopOne):?>
                                         <div class="col-6">
                                             <div class="p-2">
-                                                <h5 class="font-weight-bold">Top Total</h5>
-                                                <p class="font-italic">Nombre: </p>
-                                                <p class="font-italic">Apellidos: </p>
-                                                <p class="font-italic">Faltas: </p>
+                                                <h5 class="font-weight-bold text-primary">Top Alumnos</h5>
+                                                <p class="font-weight-bold font-italic">Nombre: <span class="font-weight-normal font-normal"><?= $almnTopOne->nombre ?> </span></p>
+                                                <p class="font-weight-bold font-italic">Apellidos: <span class="font-weight-normal font-normal"><?= $almnTopOne->apellidos ?>  </p>
+                                                <p class="font-weight-bold font-italic">Faltas: <span class="font-weight-normal font-normal"><?= $maxFaltas ?> h  </p>
                                             </div>
                                         </div>
 
                                         <div class="col-6">
                                             <div class="circulo circuloExtraGrande mt-4">
-                                                <img src="https://picsum.photos/200/200?image=22" alt="">
+                                                <img src="<?= $almnTopOne->img ?>" alt="<?= $almnTopOne->nombre ?>" title="<?= $almnTopOne->nombre . ' ' . $almnTopOne->apellidos ?>">
                                             </div>
                                         </div>
 
+                                        <?php endforeach;?>
                                     </div>
 
                                     <!-- miniaturas -->
                                     <div class="row justify-content-center mt-5">
 
-                                        <div class="col-3">
-                                            <div class="circulo circuloGrande">
-                                                <img src="https://picsum.photos/200/200?image=8" alt="">
-                                            </div>
-                                        </div>
+                                    <?php foreach($alumnos as $falton):?>
+                                        <?php $alumno->AlumnoUnico( $falton ); ?>
                                         
                                         <div class="col-3">
                                             <div class="circulo circuloGrande">
-                                                <img src="https://picsum.photos/200/200?image=4" alt="">
+                                                <img src="<?= $alumno->img ?>" alt="<?= $alumno->nombre ?>" title="<?= $alumno->nombre . ' ' . $alumno->apellidos ?>">
                                             </div>
                                         </div>
-                                        
-                                        <div class="col-3">
-                                            <div class="circulo circuloGrande">
-                                                <img src="https://picsum.photos/200/200?image=5" alt="">
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="col-3">
-                                            <div class="circulo circuloGrande">
-                                                <img src="https://picsum.photos/200/200?image=10" alt="">
-                                            </div>
-                                        </div>
+
+
+                                        <?php endforeach;?>
+                                    
 
                                     </div>
                                 </div>
                                 <!-- End card -->
 
-                                <!-- 2nd 1st card -->
+                                <!-- 2nd 1st row card -->
                                 <div class="col-6 card">
 
                                     <!-- Texto y foto principal -->
@@ -117,7 +106,7 @@
                                 
                             </div>
 
-                            <!-- 1st 2nd card -->
+                            <!-- 1st 2nd row card -->
                             <div class="row mb-3">
 
                                 <div class="col-6 card">
@@ -173,7 +162,7 @@
                                 </div>
                                 <!-- End card -->
 
-                                <!-- 2nd 2nd card -->
+                                <!-- 2nd 2nd row card -->
                                 <div class="col-6 card">
 
                                     <!-- Texto y foto principal -->

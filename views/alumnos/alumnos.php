@@ -4,7 +4,7 @@
     <table class="table text-center">
         <thead class="thead-dark">
             <tr scope=row>
-                <th>Img</th>
+                <th></th>
                 <th>Matricula</th>
                 <th>Nombre</th>
                 <th>Apellidos</th> 
@@ -15,7 +15,7 @@
             <tr scope=row>
                 <td class=" align-middle">
                     <div class="circulo">
-                        <img src="<?= $fila->img; ?>" alt="">
+                        <img src="<?= $fila->img; ?>" alt="<?= $fila->nombre; ?>" title="<?= $fila->nombre . ' ' . $fila->apellidos; ?>">
                     </div>
                 </td>
                 <td class=" align-middle"><?= $fila->matricula; ?></td>
@@ -23,7 +23,7 @@
                 <td class=" align-middle"><?= $fila->apellidos; ?></td> 
                 <td class=" align-middle">
                       <a href="" class="far fa-edit modificador"></a>
-                      <a href="" class="fas fa-trash-al borradort"></a>
+                      <a href="" class="fas fa-trash-alt borrador"></a>
                 </td>          
             </tr>
         <?php endforeach;?>
