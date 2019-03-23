@@ -1,8 +1,3 @@
-<?php
-//require_once 'models/Usuario.php';
-
-?>
-
 <div class="container-fluid">
     <div class="row">
 
@@ -10,11 +5,11 @@
         <thead class="thead-dark">
             <tr scope=row>
                 <th>Img</th>
-                <th>Nick</th>
+                <th>Usuario</th>
                 <th>Nombre</th>
                 <th>email</th>
-                <th>role</th> 
-                <th>but</th>      
+                <th>rol</th> 
+                <th></th>      
             </tr>
         </thead>
         <?php foreach ($usr->filas as $fila):?>
@@ -29,8 +24,8 @@
                 <td class=" align-middle"><?= $fila->email; ?></td>
                 <td class=" align-middle"><?= $fila->role; ?></td> 
                 <td class=" align-middle">
-                      <a class="">Modificar</a>
-                      <a class="">Eliminar</a>
+                      <a href="" class="far fa-edit modificador"></a>
+                      <a href="" class="fas fa-trash-alt borrador"></a>
                 </td>          
             </tr>
         <?php endforeach;?>
@@ -39,5 +34,11 @@
 
         
 
+    </div>
+
+    <div class="row">
+        <div class="col-2 offset-5 justify-content-center">
+            <a class="d-block my-3 btn btn-success" href="">Nuevo</a>
+        </div>
     </div>
 </div>

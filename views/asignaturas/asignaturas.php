@@ -1,1 +1,44 @@
-<h2>Asignaturas works</h2>
+<div class="container-fluid">
+    <div class="row">
+
+    <table class="table text-center">
+        <thead class="thead-dark">
+            <tr scope="row">
+                <th scope="col">Img</th>
+                <th scope="col">Código</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Horas</th> 
+                <th scope="col">Curso</th> 
+                <th scope="col"></th> 
+            </tr>
+        </thead>
+        <?php foreach ($asgn->filas as $fila):?>
+            <tr scope="row">
+                <td scope="col" class=" align-middle">
+                    <div class="circulo">
+                        <img src="<?= $fila->img; ?>" alt="">
+                    </div>
+                </td>
+                <td scope="col" class=" align-middle"><?= $fila->codigo; ?></td>
+                <td scope="col" class=" align-middle"><?= $fila->nombre; ?></td>
+                <td scope="col" class=" align-middle"><?= $fila->horas; ?></td> 
+                <td scope="col" class=" align-middle"><?= $fila->curso; ?></td> 
+                <td scope="col" class=" align-middle">
+                      <a href="" class="far fa-edit modificador"></a>
+                      <a href="" class="fas fa-trash-alt borrador"></a>
+                </td>          
+            </tr>
+        <?php endforeach;?>
+
+    </table>
+        
+
+    </div>
+
+    <div class="row">
+        <div class="col-2 offset-5 justify-content-center">
+            <a class="d-block my-3 btn btn-success" href="">Nuevo</a>
+        </div>
+    </div>
+
+</div>

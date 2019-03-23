@@ -3,31 +3,35 @@
 class Router{
 
     private $home;
-    private $redirectTo;
+    private $redirect;
 
 
     public function __construct(){
-        $this->setHome( 'main.php' );
+        //$this->setHome( 'main.php' );
     }
 
     public function getHome(){
         return $this->home;
     }
     
-    public function getredirectTo(){
-        return $this->redirectTo;
+    public function getredirect(){
+        return $this->redirect;
     }
 
     public function setHome( $home ){
         $this->home = $home;
     }
     
-    public function setredirectTo( $redirectTo ){
-        $this->redirectTo = $redirectTo;
+    public function setredirect(){
+        if ( isset($_GET['controller']) ){
+            $this->redirect = filter_var($_GET['controller'], FILTER_SANITIZE_STRING).'s';
+            $this->redirect == 'mains' ? $this->redirect = 'Inicio' : '';
+        } else {
+            $this->redirect = 'Inicio';
+        }
     }
 
-    public function navigate( $page ){
-        //require_once "views/$page.php";
+    public function navigator(){
 
         if ( isset($_GET['controller']) ){
             $controller = filter_var($_GET['controller'], FILTER_SANITIZE_STRING).'Controller';
@@ -49,7 +53,7 @@ class Router{
     }
 
     public function getBreadcrums(){
-        $arr = explode( '/', $this->redirectTo );
+        $arr = explode( '/', $this->redirect );
         
         return $arr;
     }
