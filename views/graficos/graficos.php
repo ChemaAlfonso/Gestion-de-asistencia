@@ -15,10 +15,10 @@
 
                         <div class="col-6">
                             <div class="p-2">
-                                <h5 class="font-weight-bold text-primary">Top Alumnos</h5>
+                                <h5 class="font-weight-bold text-primary">Alumnos con más faltas</h5>
                                 <p class="font-weight-bold font-italic">Nombre: <span class="font-weight-normal font-normal"><?= $almnTopOne->nombre ?> </span></p>
                                 <p class="font-weight-bold font-italic">Apellidos: <span class="font-weight-normal font-normal"><?= $almnTopOne->apellidos ?>  </p>
-                                <p class="font-weight-bold font-italic">Faltas: <span class="font-weight-normal font-normal"><?= $maxFaltas ?> H  </p>
+                                <p class="font-weight-bold font-italic">Faltas totales: <span class="font-weight-normal font-normal"><?= $maxFaltas ?> H  </p>
                             </div>
                         </div>
 
@@ -62,10 +62,10 @@
 
                         <div class="col-6">
                             <div class="p-2">
-                                <h5 class="font-weight-bold text-primary">Top Asignaturas</h5>
+                                <h5 class="font-weight-bold text-primary">Asignaturas más faltadas</h5>
                                 <p class="font-weight-bold font-italic">Nombre: <span class="font-weight-normal font-normal"><?= $asignTopOne->nombre ?> </span></p>
                                 <p class="font-weight-bold font-italic">Código: <span class="font-weight-normal font-normal"><?= $asignTopOne->codigo ?>  </p>
-                                <p class="font-weight-bold font-italic">Faltas: <span class="font-weight-normal font-normal"><?= $maxAsignFaltas ?> H  </p>
+                                <p class="font-weight-bold font-italic">Faltas totales: <span class="font-weight-normal font-normal"><?= $maxAsignFaltas ?> H  </p>
                             </div>
                         </div>
 
@@ -116,7 +116,7 @@
                                 <h5 class="font-weight-bold text-primary">Alumno aleatorio</h5>
                                 <p class="font-weight-bold font-italic">Nombre: <span class="font-weight-normal font-normal"><?= $almnTopRandOne->nombre ?> </span></p>
                                 <p class="font-weight-bold font-italic">Apellidos: <span class="font-weight-normal font-normal"><?= $almnTopRandOne->apellidos ?>  </p>
-                                <p class="font-weight-bold font-italic">Faltas: <span class="font-weight-normal font-normal"><?= $maxFaltasRand ?> h  </p>
+                                <p class="font-weight-bold font-italic">Faltas totales: <span class="font-weight-normal font-normal"><?= $maxFaltasRand ?> H  </p>
                             </div>
                         </div>
 
@@ -163,7 +163,7 @@
                                 <h5 class="font-weight-bold text-primary">Asignatura aleatoria</h5>
                                 <p class="font-weight-bold font-italic">Nombre: <span class="font-weight-normal font-normal"><?= $asignTopRandOne->nombre ?> </span></p>
                                 <p class="font-weight-bold font-italic">Código: <span class="font-weight-normal font-normal"><?= $asignTopRandOne->codigo ?>  </p>
-                                <p class="font-weight-bold font-italic">Faltas: <span class="font-weight-normal font-normal"><?= $maxAsignFaltasRand ?> H  </p>
+                                <p class="font-weight-bold font-italic">Faltas totales: <span class="font-weight-normal font-normal"><?= $maxAsignFaltasRand ?> H  </p>
                             </div>
                         </div>
 
