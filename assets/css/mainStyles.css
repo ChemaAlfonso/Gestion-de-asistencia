@@ -49,6 +49,8 @@ a:hover{
     color: #212124;
     overflow: hidden;
     position: relative;
+    transition: all .3s;
+    box-shadow: 6px 5px 8px #ccc;
 
 }
 
@@ -74,6 +76,8 @@ a:hover{
 .circuloExtraGrande:hover{
     border: 2px solid #ffc107;
     cursor: pointer;
+    border-radius: 8px;
+    transform: scale(1.2);
 }
 
 .circuloGrande img{
@@ -101,6 +105,17 @@ a:hover{
 /***************************
            Aside 
 ****************************/
+
+.profile,
+.fav{
+    box-shadow: none;
+}
+
+.profile:hover,
+.fav:hover{
+    transform: none;
+    border: 1px solid  #ffc107;
+}
 
 #favLogoText::after{
     content: '';

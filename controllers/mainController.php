@@ -10,7 +10,9 @@ class mainController{
 
     public function main(){
         
-        // Gestion de faltas alumnos //
+        /**************************
+          Gestion de faltas alumnos 
+         **************************/
         $falton = new Falta();
         $falton->alumnoMasFalton();
         
@@ -33,8 +35,9 @@ class mainController{
         $almnTop =  new Alumno();
         $almnTop->AlumnoUnico( $maxFalton );
 
-
-        // Gestion de faltas asignaturas //
+        /*******************************
+          Gestion de faltas asignaturas 
+         *******************************/
         $faltada = new Falta();
         $faltada->asignaturaMasFaltada();
         
@@ -57,12 +60,69 @@ class mainController{
         $asignTop =  new Asignatura();
         $asignTop->AsignaturaUnica( $maxAsignfaltada );
 
-        require_once 'views/shared/graficos.php';
+        /**************************
+              Alumnos RAND() 
+         **************************/
+        $faltonRand = new Falta();
+        $faltonRand->alumnoMasFaltonRand();
+        
+        $maxFaltonRand = $faltonRand->filas[0]->alumno_id;
+        $maxFaltasRand = $faltonRand->filas[0]->horas;
+
+        $faltonesRand = new Falta();
+        $faltonesRand->alumnosMasFaltonesRand();
+
+        $alumnoRand = new Alumno();
+        $alumnosRand = array();
+
+        for ($i = 0; $i < count( $faltonesRand->filas ) ; $i++){
+
+            $alumnosRand[] .= $faltonesRand->filas[$i]->alumno_id;
+                        
+        }
+
+        /* Alumno más faltón */
+        $almnTopRand =  new Alumno();
+        $almnTopRand->AlumnoUnico( $maxFaltonRand );
+
+         /*******************************
+                Asignaturas RAND() 
+         *******************************/
+        
+        $faltadaRand = new Falta();
+        $faltadaRand->asignaturaMasFaltadaRand();
+        
+        $maxAsignfaltadaRand = $faltadaRand->filas[0]->asignatura_id;
+        $maxAsignFaltasRand = $faltadaRand->filas[0]->horas;
+
+        $asignMasFaltadasRand = new Falta();
+        $asignMasFaltadasRand->asignaturasMasFaltadasRand();
+
+        $asignaturaRand = new Asignatura();
+        $asignaturasRand = array();
+
+        for ($i = 0; $i < count( $asignMasFaltadasRand->filas ) ; $i++){
+
+            $asignaturasRand[] .= $asignMasFaltadasRand->filas[$i]->asignatura_id;
+                        
+        }
+        
+        /* Asignatura mas faltada */
+        $asignTopRand =  new Asignatura();
+        $asignTopRand->AsignaturaUnica( $maxAsignfaltadaRand );
+
+
+
+        require_once 'views/graficos/graficos.php';
     }
 
     public function error(){
 
         require_once 'views/shared/error.php';
+    }
+
+    public function getRandomAsign(){
+        
     }
 
 }

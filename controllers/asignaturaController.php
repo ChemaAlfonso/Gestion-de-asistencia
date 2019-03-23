@@ -13,6 +13,18 @@ class AsignaturaController{
         $asgn->Asignaturas();
 
         require_once 'views/asignaturas/asignaturas.php';
+    }    
+
+    public function crear(){
+
+        require_once 'views/asignaturas/crear.php';
+    }
+
+    public function edit(){
+
+        $_GET['edit'] = true;
+
+        require_once 'views/asignaturas/crear.php';
     }
 
 }

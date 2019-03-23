@@ -24,7 +24,7 @@
                 <td class=" align-middle"><?= $fila->dia; ?></td> 
                 <td class=" align-middle"><?= $fila->horas; ?></td> 
                 <td class=" align-middle">
-                      <a href="" class="far fa-edit modificador"></a>
+                      <a href="index.php?controller=falta&action=edit" class="far fa-edit modificador"></a>
                       <a href="" class="fas fa-trash-alt borrador"></a>
                 </td>          
             </tr>
@@ -38,7 +38,7 @@
 
     <div class="row">
         <div class="col-2 offset-5 justify-content-center">
-            <a class="d-block my-3 btn btn-success" href="">Nuevo</a>
+            <a class="d-block my-3 btn btn-success" href="index.php?controller=falta&action=crear">Nuevo</a>
         </div>
     </div>
 </div>

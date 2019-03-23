@@ -4,7 +4,7 @@
         <!-- Logo -->
         <div class="row">
             <div id="favLogoText" class="col-12">
-                <div class="circulo circuloExtraGrande">
+                <div class="circulo circuloExtraGrande profile">
                     <a href="">
                         <img src="https://picsum.photos/200/200?image=8" alt="">
                     </a>

@@ -66,11 +66,18 @@ class Falta extends Db{
         return $this->seleccionar("SELECT alumno_id, SUM(horas) as 'horas' FROM faltas GROUP BY alumno_id ORDER BY horas DESC  LIMIT 1");
     }
 
+    public function alumnoMasFaltonRand(){
+        return $this->seleccionar("SELECT alumno_id, SUM(horas) as 'horas' FROM faltas GROUP BY alumno_id ORDER BY RAND() DESC");
+    }
     
     public function alumnosMasFaltones(){
         return $this->seleccionar("SELECT alumno_id, SUM(horas) as 'horas' FROM faltas GROUP BY alumno_id ORDER BY horas DESC  LIMIT 1, 4");
     }
     
+    public function alumnosMasFaltonesRand(){
+        return $this->seleccionar("SELECT alumno_id, SUM(horas) as 'horas' FROM faltas GROUP BY alumno_id ORDER BY RAND() DESC  LIMIT 1, 4");
+    }
+
     public function FaltasAlumnoTotal( $id )
     {
         return $this->seleccionar( "SELECT alumno_id,SUM(horas) as 'horas' FROM faltas WHERE alumno_id = $id;" );
@@ -82,11 +89,18 @@ class Falta extends Db{
         return $this->seleccionar("SELECT asignatura_id, SUM(horas) as 'horas' FROM faltas GROUP BY asignatura_id ORDER BY horas DESC  LIMIT 1");
     }
 
+    public function asignaturaMasFaltadaRand(){
+        return $this->seleccionar("SELECT asignatura_id, SUM(horas) as 'horas' FROM faltas GROUP BY asignatura_id ORDER BY RAND() DESC");
+    }
     
     public function asignaturasMasFaltadas(){
         return $this->seleccionar("SELECT asignatura_id, SUM(horas) as 'horas' FROM faltas GROUP BY asignatura_id ORDER BY horas DESC  LIMIT 1, 4");
     }
     
+    public function asignaturasMasFaltadasRand(){
+        return $this->seleccionar("SELECT asignatura_id, SUM(horas) as 'horas' FROM faltas GROUP BY asignatura_id ORDER BY RAND() DESC  LIMIT 1, 4");
+    }
+
     public function FaltasAsignaturaTotal( $id )
     {
         return $this->seleccionar( "SELECT asignatura_id,SUM(horas) as 'horas' FROM faltas WHERE asignatura_id = $id;" );

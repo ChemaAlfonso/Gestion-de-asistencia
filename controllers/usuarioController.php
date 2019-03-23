@@ -15,4 +15,17 @@ class UsuarioController{
         require_once 'views/usuarios/usuarios.php';
     }
 
+    public function crear(){
+
+        require_once 'views/usuarios/crear.php';
+    }
+
+    public function edit(){
+
+        $_GET['edit'] = true;
+
+        require_once 'views/usuarios/crear.php';
+    }
+
+
 }
