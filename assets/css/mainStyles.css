@@ -50,7 +50,7 @@ a:hover{
     overflow: hidden;
     position: relative;
     transition: all .3s;
-    box-shadow: 6px 5px 8px #ccc;
+    box-shadow: 3px 3px 8px #ccc;
 
 }
 
@@ -181,4 +181,9 @@ header p{
 
 .borrador{
     color: rgb(167, 29, 42);
+}
+
+tr:hover{
+    background-color: #343a40;
+    color: #fff;
 }

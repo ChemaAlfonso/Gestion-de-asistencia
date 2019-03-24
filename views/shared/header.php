@@ -15,8 +15,3 @@
     <title>Faltas de asistencia</title>
 </head>
 <body>
-    <header class="d-none"><h1>Faltas de asistencia</h1></header>
-    
-    <!-- Main container -->
-    <div class="container-fluid blackBg vh-100">
-        <div class="row">

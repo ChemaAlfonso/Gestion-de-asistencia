@@ -61,7 +61,7 @@ class FaltaController{
 
         $alumno_id       = filter_var( $_POST['alumno_id'], FILTER_SANITIZE_NUMBER_INT );
         $asignatura_id   = filter_var( $_POST['asignatura_id'], FILTER_SANITIZE_NUMBER_INT );
-        $dia             = $_POST['dia'];
+        $dia             = filter_var( $_POST['dia'], FILTER_SANITIZE_STRING );
         $horas           = filter_var( $_POST['horas'], FILTER_SANITIZE_STRING );
         
 

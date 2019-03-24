@@ -74,9 +74,11 @@
                         </div>
 
                         <div class="col-6">
-                            <div class="circulo circuloExtraGrande mt-4">
-                                <img src="<?= $asignTopOne->img ?>" alt="<?= $asignTopOne->nombre ?>" title="<?= $asignTopOne->nombre . ' - ' . $asignTopOne->codigo ?>">
-                            </div>
+                            <a href="index.php?controller=asignatura&action=edit&id=<?= $asignTopOne->id; ?>">
+                                <div class="circulo circuloExtraGrande mt-4">
+                                    <img src="<?= $asignTopOne->img ?>" alt="<?= $asignTopOne->nombre ?>" title="<?= $asignTopOne->nombre . ' - ' . $asignTopOne->codigo ?>">
+                                </div>
+                            </a>
                         </div>
 
                         <?php endforeach;?>
@@ -86,7 +88,6 @@
                     <div class="row justify-content-center mt-5">
 
                     <?php foreach($asignaturas as $faltada):?>
-
                         <?php $asignatura->AsignaturaUnica( $faltada ); ?>
                         
                         <div class="col-3">
@@ -179,9 +180,11 @@
                         </div>
 
                         <div class="col-6">
-                            <div class="circulo circuloExtraGrande mt-4">
-                                <img src="<?= $asignTopRandOne->img ?>" alt="<?= $asignTopRandOne->nombre ?>" title="<?= $asignTopRandOne->nombre . ' - ' . $asignTopRandOne->codigo ?>">
-                            </div>
+                            <a href="index.php?controller=asignatura&action=edit&id=<?= $asignTopRandOne->id; ?>">
+                                <div class="circulo circuloExtraGrande mt-4">
+                                    <img src="<?= $asignTopRandOne->img ?>" alt="<?= $asignTopRandOne->nombre ?>" title="<?= $asignTopRandOne->nombre . ' - ' . $asignTopRandOne->codigo ?>">
+                                </div>
+                            </a>
                         </div>
 
                         <?php endforeach;?>
@@ -195,9 +198,11 @@
                         <?php $asignaturaRand->AsignaturaUnica( $faltadaRand ); ?>
                         
                         <div class="col-3">
-                            <div class="circulo circuloGrande">
-                                <img src="<?= $asignaturaRand->img ?>" alt="<?= $asignaturaRand->nombre ?>" title="<?= $asignaturaRand->nombre . ' - ' . $asignaturaRand->codigo ?>">
-                            </div>
+                            <a href="index.php?controller=asignatura&action=edit&id=<?= $asignaturaRand->id; ?>">
+                                <div class="circulo circuloGrande">
+                                    <img src="<?= $asignaturaRand->img ?>" alt="<?= $asignaturaRand->nombre ?>" title="<?= $asignaturaRand->nombre . ' - ' . $asignaturaRand->codigo ?>">
+                                </div>
+                            </a>
                         </div>
 
 

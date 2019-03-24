@@ -8,7 +8,7 @@
                 <th>Alumno</th>
                 <th>Asignatura</th>
                 <th>Dia</th>
-                <th>Horas</th> 
+                <th>Faltas (h)</th> 
                 <th></th>
             </tr>
         </thead>
