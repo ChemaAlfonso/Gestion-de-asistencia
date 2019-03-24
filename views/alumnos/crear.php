@@ -15,7 +15,7 @@
 
                             
                         <div class="col-6  justify-content-center">
-                            <h2><?= isset($alumnoEdit) ? 'Modificar alumno' : 'Nuevo alumno' ?></h2>
+                            <h2><?= isset($alumnoEdit) ? $alumnoEdit->filas[0]->nombre. ' ' . $alumnoEdit->filas[0]->apellidos : 'Nuevo alumno' ?></h2>
                         </div>
                 
                     

@@ -109,8 +109,8 @@ CREATE TABLE IF NOT EXISTS faltas(
     dia             DATE,
     horas           int(4),
 CONSTRAINT pk_alumnos PRIMARY KEY (alumno_id,asignatura_id, dia),
-CONSTRAINT fk_faltas_alumnos FOREIGN KEY (alumno_id) REFERENCES alumnos(id),
-CONSTRAINT fk_faltas_asignaturas FOREIGN KEY (asignatura_id) REFERENCES asignaturas(id)
+CONSTRAINT fk_faltas_alumnos FOREIGN KEY (alumno_id) REFERENCES alumnos(id) ON DELETE CASCADE ON UPDATE CASCADE,
+CONSTRAINT fk_faltas_asignaturas FOREIGN KEY (asignatura_id) REFERENCES asignaturas(id)  ON DELETE CASCADE ON UPDATE CASCADE
 )Engine=InnoDB DEFAULT CHARSET = latin1;
 
 /* Inserts de faltas */

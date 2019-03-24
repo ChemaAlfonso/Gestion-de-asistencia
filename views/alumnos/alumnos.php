@@ -30,7 +30,7 @@
                 <td class=" align-middle"><?= $falta->filas[0]->horas; ?></td>
                 <td class=" align-middle">
                       <a href="index.php?controller=alumno&action=edit&id=<?= $fila->id; ?>" class="far fa-edit modificador"></a>
-                      <a href="index.php?controller=alumno&action=remove" class="fas fa-trash-alt borrador"></a>
+                      <a href="index.php?controller=alumno&action=remove&id=<?= $fila->id; ?>" class="fas fa-trash-alt borrador"></a>
                 </td>          
             </tr>
         <?php endforeach;?>

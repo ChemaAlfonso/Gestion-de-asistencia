@@ -12,20 +12,23 @@
                 <th></th>
             </tr>
         </thead>
+
         <?php foreach ($falta->filas as $fila):?>
             <tr scope=row>
                 <td class=" align-middle">
-                    <div class="circulo">
-                        <img src="<?= $fila->fotoAlumno; ?>" alt="<?= $fila->nombreAlumno; ?>" title="<?= $fila->nombreAlumno; ?>">
-                    </div>
+                    <a href="index.php?controller=falta&action=edit&idAlum=<?= $fila->alumno_id; ?>&idAsig=<?= $fila->asignatura_id; ?>&dia=<?= $fila->dia; ?>">
+                        <div class="circulo">
+                            <img src="<?= $fila->fotoAlumno; ?>" alt="<?= $fila->nombreAlumno; ?>" title="<?= $fila->nombreAlumno; ?>">
+                        </div>
+                    </a>
                 </td>
-                <td class=" align-middle"><?= $fila->nombreAlumno; ?></td>
+                <td class=" align-middle"><?= $fila->nombreAlumno . ' ' . $fila->apellidosAlumno; ?></td>
                 <td class=" align-middle"><?= $fila->nombreAsignatura; ?></td>
                 <td class=" align-middle"><?= $fila->dia; ?></td> 
                 <td class=" align-middle"><?= $fila->horas; ?></td> 
                 <td class=" align-middle">
-                      <a href="index.php?controller=falta&action=edit" class="far fa-edit modificador"></a>
-                      <a href="" class="fas fa-trash-alt borrador"></a>
+                      <a href="index.php?controller=falta&action=edit&idAlum=<?= $fila->alumno_id; ?>&idAsig=<?= $fila->asignatura_id; ?>&dia=<?= $fila->dia; ?>" class="far fa-edit modificador"></a>
+                      <a href="index.php?controller=falta&action=remove&idAlum=<?= $fila->alumno_id; ?>&idAsig=<?= $fila->asignatura_id; ?>&dia=<?= $fila->dia; ?>" class="fas fa-trash-alt borrador"></a>
                 </td>          
             </tr>
         <?php endforeach;?>

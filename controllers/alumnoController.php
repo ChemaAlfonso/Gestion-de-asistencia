@@ -8,6 +8,10 @@ class AlumnoController{
     public function __construct(){
 
     }
+           
+    /*************************
+     *       Vistas
+     *************************/
 
     public function main(){
         $alm = new Alumno();
@@ -25,6 +29,10 @@ class AlumnoController{
             require_once 'views/alumnos/crear.php';
 
     }
+
+    /*************************
+     *  Creación / Edicion
+     *************************/
 
     public function create(){
 
@@ -132,5 +140,22 @@ class AlumnoController{
         }
     }
 
+    
+    /*************************
+     *        Borrado
+     *************************/
+
+     public function remove()
+     {
+        $id =  filter_var($_GET['id'], FILTER_SANITIZE_NUMBER_INT);
+
+        $alumno = new Alumno();
+
+        $alumno->remove( $id );
+
+        $this->main();
+
+
+     }
 
 }
