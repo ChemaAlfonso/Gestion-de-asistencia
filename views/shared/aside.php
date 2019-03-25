@@ -1,4 +1,4 @@
-<div class="col-2 text-white text-center sidebar py-3  vh-100">
+<div class="col-lg-2 col-md-3 text-white text-center sidebar py-3  vh-lg-100">
     <div class="container-fluid">
 
         <!-- Logo -->
@@ -6,10 +6,10 @@
             <div id="favLogoText" class="col-12">
                 <div class="circulo d-flex justify-content-center circuloExtraGrande profile">
                     <a href="?controller=usuario&action=edit&id=<?= !empty( $_SESSION['user'] ) ? $_SESSION['user']->id  : 1 ?>">
-                        <img class="rounded mx-auto d-block" src="<?= !empty( $_SESSION['user'] ) ? $_SESSION['user']->img  : 'https://picsum.photos/200/200?image=8' ?>" alt="<?= !empty( $_SESSION['user'] ) ? $_SESSION['user']->nickname  : 'profile picture' ?>">
+                        <img class="rounded mx-auto d-block" src="<?= !empty( $_SESSION['user'] ) ? $_SESSION['user']->img  : 'https://picsum.photos/200/200?image=8' ?>" alt="<?= !empty( $_SESSION['user'] ) ? $_SESSION['user']->nickname  : 'profile picture' ?>" title="Ver perfil">
                     </a>
                 </div>
-                <a class="text-white" href="">
+                <a class="text-white text-capitalize" href="">
                     <p class="mt-2"><?= !empty( $_SESSION['user'] ) ? $_SESSION['user']->nickname  : 'Chema Alfonso' ?></p>
                 </a>
             </div>

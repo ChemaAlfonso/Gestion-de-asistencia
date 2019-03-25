@@ -1,6 +1,6 @@
 <?php
 
-abstract class DbConfig{
+abstract class DbConf{
     private $server = 'localhost';
     private $db = 'faltasdeasistencia';
     private $usr = 'root';

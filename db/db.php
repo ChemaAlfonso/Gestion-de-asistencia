@@ -2,7 +2,7 @@
 
 require_once 'DbConf.php';
 
-class Db extends DbConfig{
+class Db extends DbConf{
 
     private $conn;
     private $error;

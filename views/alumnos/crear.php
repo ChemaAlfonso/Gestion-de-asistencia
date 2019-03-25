@@ -1,12 +1,12 @@
 <div class="row">
 
-    <div class="col-5">
+    <div class="col-lg-5 col-12">
         <div class="viewItemImgContainer m-auto overflow-hidden">
             <img class="viewItemImg img-fluid" src="<?= isset($alumnoEdit) ? $alumnoEdit->filas[0]->img : 'https://picsum.photos/500/600?image=12' ?>" alt="<?= isset($alumnoEdit) ? $alumnoEdit->filas[0]->nombre : '' ?>">
         </div>
     </div>
 
-    <div class="col-6 ">
+    <div class="col-lg-6 col-12">
 
         <div class="row">
             <div class="col-12 ">

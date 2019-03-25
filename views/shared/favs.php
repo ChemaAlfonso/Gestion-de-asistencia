@@ -4,7 +4,7 @@
 <div class="container-fluid blackBg vh-100">
     
     <div class="row">
-        <div class="col-1 text-white text-center blackDarkBg py-3 vh-100">
+        <div class="col-lg-1 col-6 text-white d-sm-none d-md-none d-lg-block d-xl-block text-center blackDarkBg py-3 vh-100">
             <p class="fas fa-star display-4 text-warning"></p>
 
             <!-- favsList -->
@@ -33,6 +33,15 @@
                     <div class="circulo fav">
                         <a href="">
                             <img src="https://picsum.photos/200/200/?random?image=2" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 py-2">
+                    <div class="circulo fav h2 bg-dark border border-dark">
+                        <a class="fas fa-plus d-block pt-2 text-warning" href="">
                         </a>
                     </div>
                 </div>

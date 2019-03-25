@@ -4,9 +4,9 @@
     <div class="col-12 bg-white">
 
             <!-- 1st 1st card -->
-            <div class="row mb-3">
+            <div class="row mb-3 justify-content-around">
 
-                <div class="col-6 card">
+                <div class="col-lg-5 col-12 mb-2 card">
 
                     <!-- Texto y foto principal -->
                     <div class="row h-50">
@@ -17,8 +17,8 @@
                             <div class="p-2">
                                 <h5 class="font-weight-bold text-primary">Alumnos con más faltas</h5>
                                 <p class="font-weight-bold font-italic">Nombre: <span class="font-weight-normal font-normal"><?= $almnTopOne->nombre ?> </span></p>
-                                <p class="font-weight-bold font-italic">Apellidos: <span class="font-weight-normal font-normal"><?= $almnTopOne->apellidos ?>  </p>
-                                <p class="font-weight-bold font-italic">Faltas totales: <span class="font-weight-normal font-normal"><?= $maxFaltas ?> H  </p>
+                                <p class="font-weight-bold font-italic">Apellidos: <span class="font-weight-normal font-normal"><?= $almnTopOne->apellidos ?></span>  </p>
+                                <p class="font-weight-bold font-italic">Faltas totales: <span class="font-weight-normal font-normal"><?= $maxFaltas ?> H </span> </p>
                             </div>
                         </div>
 
@@ -57,7 +57,7 @@
                 <!-- End card -->
 
                 <!-- 2nd 1st row card -->
-                <div class="col-6 card">
+                <div class="col-lg-5 col-12 mb-2 card">
 
                     <!-- Texto y foto principal -->
                     <div class="row h-50">
@@ -68,8 +68,8 @@
                             <div class="p-2">
                                 <h5 class="font-weight-bold text-primary">Asignaturas más faltadas</h5>
                                 <p class="font-weight-bold font-italic">Nombre: <span class="font-weight-normal font-normal"><?= $asignTopOne->nombre ?> </span></p>
-                                <p class="font-weight-bold font-italic">Código: <span class="font-weight-normal font-normal"><?= $asignTopOne->codigo ?>  </p>
-                                <p class="font-weight-bold font-italic">Faltas totales: <span class="font-weight-normal font-normal"><?= $maxAsignFaltas ?> H  </p>
+                                <p class="font-weight-bold font-italic">Código: <span class="font-weight-normal font-normal"><?= $asignTopOne->codigo ?></span>  </p>
+                                <p class="font-weight-bold font-italic">Faltas totales: <span class="font-weight-normal font-normal"><?= $maxAsignFaltas ?> H </span> </p>
                             </div>
                         </div>
 
@@ -109,9 +109,9 @@
             </div>
 
             <!-- 1st 2nd row card -->
-            <div class="row mb-3">
+            <div class="row mb-3 justify-content-around">
 
-                <div class="col-6 card">
+                <div class="col-lg-5 col-12 mb-2 card">
 
                     <!-- Texto y foto principal -->
                     <div class="row h-50">
@@ -122,8 +122,8 @@
                             <div class="p-2">
                                 <h5 class="font-weight-bold text-primary">Alumno aleatorio</h5>
                                 <p class="font-weight-bold font-italic">Nombre: <span class="font-weight-normal font-normal"><?= $almnTopRandOne->nombre ?> </span></p>
-                                <p class="font-weight-bold font-italic">Apellidos: <span class="font-weight-normal font-normal"><?= $almnTopRandOne->apellidos ?>  </p>
-                                <p class="font-weight-bold font-italic">Faltas totales: <span class="font-weight-normal font-normal"><?= $maxFaltasRand ?> H  </p>
+                                <p class="font-weight-bold font-italic">Apellidos: <span class="font-weight-normal font-normal"><?= $almnTopRandOne->apellidos ?></span>  </p>
+                                <p class="font-weight-bold font-italic">Faltas totales: <span class="font-weight-normal font-normal"><?= $maxFaltasRand ?> H  </p></span>
                             </div>
                         </div>
 
@@ -163,7 +163,7 @@
                 <!-- End card -->
 
                 <!-- 2nd 2nd row card -->
-                <div class="col-6 card">
+                <div class="col-lg-5 col-12 mb-2 card ">
 
                     <!-- Texto y foto principal -->
                     <div class="row h-50">
@@ -174,8 +174,8 @@
                             <div class="p-2">
                                 <h5 class="font-weight-bold text-primary">Asignatura aleatoria</h5>
                                 <p class="font-weight-bold font-italic">Nombre: <span class="font-weight-normal font-normal"><?= $asignTopRandOne->nombre ?> </span></p>
-                                <p class="font-weight-bold font-italic">Código: <span class="font-weight-normal font-normal"><?= $asignTopRandOne->codigo ?>  </p>
-                                <p class="font-weight-bold font-italic">Faltas totales: <span class="font-weight-normal font-normal"><?= $maxAsignFaltasRand ?> H  </p>
+                                <p class="font-weight-bold font-italic">Código: <span class="font-weight-normal font-normal"><?= $asignTopRandOne->codigo ?></span>  </p>
+                                <p class="font-weight-bold font-italic">Faltas totales: <span class="font-weight-normal font-normal"><?= $maxAsignFaltasRand ?> H </span> </p>
                             </div>
                         </div>
 

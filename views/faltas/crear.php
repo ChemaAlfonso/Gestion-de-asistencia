@@ -1,6 +1,6 @@
 <div class="row">
 
-    <div class="col-5">
+    <div class="col-lg-5 col-12">
         <div class="viewItemImgContainer m-auto overflow-hidden">
         
             <img class="viewItemImg img-fluid" 
@@ -45,7 +45,7 @@
         </div>
     </div>
     
-    <div class="col-6 ">
+    <div class="col-lg-6 col-12">
 
         <div class="row">
             <div class="col-12 ">

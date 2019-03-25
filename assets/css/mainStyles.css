@@ -17,6 +17,7 @@ a{
 a:hover{
     text-decoration: none;
     color: #ffc107 !important;
+    cursor: pointer;
 }
 
 .btn:hover{
@@ -79,6 +80,17 @@ a:hover{
     transform: scale(1.2);
 }
 
+
+/***************************
+      Header & title 
+****************************/
+
+header p{
+    color:#343a40;
+    font-size: 2.3em;
+}
+
+
 /***************************
            Aside 
 ****************************/
@@ -118,29 +130,33 @@ a:hover{
 }
 
 /***************************
-      Header & title 
-****************************/
-
-header p{
-    color:#343a40;
-    font-size: 2.3em;
-}
-
-
-/***************************
          Views 
 ****************************/
 
 .viewItemImgContainer{
-    width: 500px;
-    height: 600px;
+    max-width: 500px;
+    max-height: 600px;
     position: relative;
 }
 
-.viewItemImg{
+
+/***************************
+     Modificadores rows 
+****************************/
+
+
+.modificador,
+.borrador{
+    font-size: 1.3em;
 }
 
+.modificador{
+    color: rgb(33, 136, 56);
+}
 
+.borrador{
+    color: rgb(167, 29, 42);
+}
 
 /***************************
           MISC 
@@ -159,27 +175,17 @@ header p{
     margin: auto;
 }
 
-
-
-/***************************
-        Modificadores 
-****************************/
-
-
-.modificador,
-.borrador{
-    font-size: 1.3em;
-}
-
-.modificador{
-    color: rgb(33, 136, 56);
-}
-
-.borrador{
-    color: rgb(167, 29, 42);
-}
-
 tr:hover{
     background-color: #343a40;
     color: #fff;
+}
+
+.card:hover{
+    border: 1px solid #ffc107;
+}
+.fa-star:hover{
+    transition: all .5s;
+}
+.fa-star:hover{
+    transform: rotateY(360deg);
 }
