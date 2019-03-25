@@ -1,5 +1,7 @@
 <?php     
 
+session_start();
+
 //Modulo de rutas
 require_once 'models/Router.php';
       
@@ -9,12 +11,33 @@ require_once 'autoload.php';
 /* Header */
 require_once 'views/shared/header.php'; 
 
+     //Si cerramos sesion
+     if ( isset( $_GET['logOut'] ) )
+          $_SESSION['user'] = null;
+
+     //Si esta registrado
 
 if ( !empty( $_SESSION['user'] ) ){
 
-    $usr = filter_var( $_SESSION['user'], FILTER_SANITIZE_STRING );
+     $usr = filter_var( $_SESSION['user'], FILTER_SANITIZE_STRING );
 
-    
+     /* Seteo de la cookie de sesion si se requiere */
+     if ( isset( $usr ) && isset( $_SESSION['recordar'] ) ){
+          
+          if ( $_SESSION['recordar'] === true ){
+     
+               setcookie("userLogin",$usr, $_SESSION['logstart']+604800);
+     
+          } elseif ( $_SESSION['recordar'] === false )  {
+     
+               setcookie("userLogin",$usr, $_SESSION['logstart']-604800);
+               unset( $_COOKIE['userLogin'] );
+     
+          }
+          
+          unset( $_SESSION['recordar'] );
+          
+     }    
 
      /* 1st Big col (FAVS) */
      require_once 'views/shared/favs.php'; 
@@ -30,10 +53,24 @@ if ( !empty( $_SESSION['user'] ) ){
 
 
 } else {
-    $usr = null;
-    require_once 'views/login/login.php'; 
+     
+     //Si no esta registrado
+
+     if ( !empty( $_GET['reg'] ) ){
+
+          $_GET['controller'] = 'login';
+          $_GET['action'] = 'register';
+          
+     } else {
+
+          $_GET['controller'] = 'login';
+          $_GET['action'] = 'main';
+          
+     }
+
+     $router = new Router();
+     $router->navigator();
+
 }
-
-
 
  require_once 'views/shared/footer.php'; 

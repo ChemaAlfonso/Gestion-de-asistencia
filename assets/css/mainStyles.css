@@ -94,16 +94,6 @@ a:hover{
 }
 
 /***************************
-          MISC 
-****************************/
-.copy{
-    position: absolute;
-    bottom: 0;
-    right: 2em;
-}
-
-
-/***************************
            Aside 
 ****************************/
 
@@ -163,6 +153,26 @@ header p{
 
 .viewItemImg{
 }
+
+
+
+/***************************
+          MISC 
+****************************/
+.copy{
+    position: absolute;
+    bottom: 0;
+    right: 2em;
+}
+
+.end{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
 
 
 /***************************

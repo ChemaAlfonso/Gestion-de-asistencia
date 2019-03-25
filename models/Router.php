@@ -27,7 +27,7 @@ class Router{
             $this->redirect = filter_var($_GET['controller'], FILTER_SANITIZE_STRING).'s';
             $this->redirect == 'mains' ? $this->redirect = 'Inicio' : '';
 
-            if (isset($_GET['action'])){
+            if ( isset( $_GET['action'] ) ){
                 $_GET['action'] == 'main' ? $action = 'Inicio' : $action =  filter_var($_GET['action'], FILTER_SANITIZE_STRING);
 
                 $this->redirect = $this->redirect . '/' . $action;

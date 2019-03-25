@@ -6,11 +6,11 @@
             <div id="favLogoText" class="col-12">
                 <div class="circulo circuloExtraGrande profile">
                     <a href="">
-                        <img src="https://picsum.photos/200/200?image=8" alt="">
+                        <img src="<?= !empty( $_SESSION['user'] ) ? $_SESSION['user']->img  : 'https://picsum.photos/200/200?image=8' ?>" alt="<?= !empty( $_SESSION['user'] ) ? $_SESSION['user']->nickname  : 'profile picture' ?>">
                     </a>
                 </div>
                 <a class="text-white" href="">
-                    <p class="mt-2">Chema Alfonso</p>
+                    <p class="mt-2"><?= !empty( $_SESSION['user'] ) ? $_SESSION['user']->nickname  : 'Chema Alfonso' ?></p>
                 </a>
             </div>
         </div>
@@ -42,7 +42,9 @@
                     <li><a href="?controller=falta&action=main">FALTAS</a></li>
                     <li><a href="?controller=alumno&action=main">ALUMNOS</a></li>
                     <li><a href="?controller=asignatura&action=main">ASIGNATURAS</a></li>
+                    <?php if ( $_SESSION['user']->role_id < 1 ) : ?>
                     <li><a href="?controller=usuario&action=main">USUARIOS</a></li>
+                    <?php endif; ?>
                 </ul>
             </div>
         </div>

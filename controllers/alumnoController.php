@@ -51,9 +51,11 @@ class AlumnoController{
             $img = $_FILES['img']['name'];
 
 
+            
             $img = $this->saveImg( $nombre, $matricula );
-
+            
             $alumno->img = $img;
+
 
         }
         

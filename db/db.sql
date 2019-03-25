@@ -120,4 +120,4 @@ INSERT INTO `faltas` (`alumno_id`, `asignatura_id`, `dia`, `horas`) VALUES ('3',
 INSERT INTO `faltas` (`alumno_id`, `asignatura_id`, `dia`, `horas`) VALUES ('4', '4', '2019-03-11', '9'), ('3', '3', '2019-03-12', '3');
 INSERT INTO `faltas` (`alumno_id`, `asignatura_id`, `dia`, `horas`) VALUES ('5', '2', '2019-03-20', '16');
 INSERT INTO `faltas` (`alumno_id`, `asignatura_id`, `dia`, `horas`) VALUES ('2', '6', '2019-03-27', '15');
-INSERT INTO `faltas` (`alumno_id`, `asignatura_id`, `dia`, `horas`) VALUES ('6', '5', '2019-02-14', '29');
+INSERT INTO `faltas` (`alumno_id`, `asignatura_id`, `dia`, `horas`) VALUES ('6', '6', '2019-02-14', '29');

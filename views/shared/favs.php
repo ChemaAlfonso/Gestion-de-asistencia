@@ -1,4 +1,3 @@
-
 <header class="d-none"><h1>Faltas de asistencia</h1></header>
 
 <!-- Main container -->
@@ -36,6 +35,15 @@
                             <img src="https://picsum.photos/200/200/?random?image=2" alt="">
                         </a>
                     </div>
+                </div>
+            </div>
+
+             <!-- OFF -->
+            <div class="row end">
+                <div class="col-12">
+                    <a class="text-danger" href="index.php?logOut=true"> 
+                        <p class="fas fa-power-off display-4"></p>
+                    </a>
                 </div>
             </div>
 
