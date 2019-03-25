@@ -43,10 +43,8 @@ CONSTRAINT fk_usuarios_role FOREIGN KEY (role_id) REFERENCES roles (code)
 
 /* Inserts de usuarios */
 
-INSERT INTO `usuarios` (`id`, `nickname`, `nombre`, `apellidos`, `email`, `password`, `favoritos`, `role_id`, `img`) VALUES (NULL, 'admin', 'admin', 'admin', 'admin@admin.com', 'admin', 'admin', '0', './assets/img/users/profile/general/user.png');
-INSERT INTO `usuarios` (`id`, `nickname`, `nombre`, `apellidos`, `email`, `password`, `favoritos`, `role_id`, `img`) VALUES (NULL, 'qwe', 'qwe', 'qwe', 'qwe@qwe.com', 'qwe', 'qwe', '1', './assets/img/users/profile/general/user.png');
-INSERT INTO `usuarios` (`id`, `nickname`, `nombre`, `apellidos`, `email`, `password`, `favoritos`, `role_id`, `img`) VALUES (NULL, 'tyu', 'tyu', 'tyu', 'tyu@tyu.com', 'qwe', 'qwe', '1', './assets/img/users/profile/general/user.png');
-INSERT INTO `usuarios` (`id`, `nickname`, `nombre`, `apellidos`, `email`, `password`, `favoritos`, `role_id`, `img`) VALUES (NULL, 'uio', 'uio', 'uio', 'uio@uio.com', 'uio', 'uio', '1', './assets/img/users/profile/general/user.png');
+INSERT INTO `usuarios` (`id`, `nickname`, `nombre`, `apellidos`, `email`, `password`, `favoritos`, `role_id`, `img`) VALUES (NULL, 'admin', 'admin', 'admin', 'admin@admin.com', 'Y0lxb3pLQm5wN0kxY0w0TXIrSnhWZz09', 'admin', '0', './assets/img/users/profile/general/user.png');
+INSERT INTO `usuarios` (`id`, `nickname`, `nombre`, `apellidos`, `email`, `password`, `favoritos`, `role_id`, `img`) VALUES (NULL, 'user', 'user', 'user', 'user@user.com', 'aDFGOXdKOHE1NUh4ckt3ZGhuTWd1Zz09', 'user', '1', './assets/img/users/profile/general/user.png');
 
 
 

@@ -19,7 +19,7 @@
             <tr scope=row>
                 <td class=" align-middle">
                     <a href="index.php?controller=alumno&action=edit&id=<?= $fila->id; ?>">
-                        <div class="circulo">
+                        <div class="circulo d-flex justify-content-center">
                             <img src="<?= $fila->img; ?>" alt="<?= $fila->nombre; ?>" title="<?= $fila->nombre . ' ' . $fila->apellidos; ?>">
                         </div>
                     </a>

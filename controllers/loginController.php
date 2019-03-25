@@ -59,6 +59,7 @@ class LoginController extends MainController{
         $contrasena = FILTER_INPUT(INPUT_POST, 'password');
         $recordar   = (bool)FILTER_INPUT(INPUT_POST, 'recordar');
 
+        
 
         $login = new Login( $usuario, $contrasena );
         
@@ -76,8 +77,7 @@ class LoginController extends MainController{
             }
 
             $_SESSION['contador'] = 0;
-
-            header("location:index.php");
+            header("location:index.php?recordar=true");
         }
         else
         {

@@ -4,9 +4,9 @@
         <!-- Logo -->
         <div class="row">
             <div id="favLogoText" class="col-12">
-                <div class="circulo circuloExtraGrande profile">
-                    <a href="">
-                        <img src="<?= !empty( $_SESSION['user'] ) ? $_SESSION['user']->img  : 'https://picsum.photos/200/200?image=8' ?>" alt="<?= !empty( $_SESSION['user'] ) ? $_SESSION['user']->nickname  : 'profile picture' ?>">
+                <div class="circulo d-flex justify-content-center circuloExtraGrande profile">
+                    <a href="?controller=usuario&action=edit&id=<?= !empty( $_SESSION['user'] ) ? $_SESSION['user']->id  : 1 ?>">
+                        <img class="rounded mx-auto d-block" src="<?= !empty( $_SESSION['user'] ) ? $_SESSION['user']->img  : 'https://picsum.photos/200/200?image=8' ?>" alt="<?= !empty( $_SESSION['user'] ) ? $_SESSION['user']->nickname  : 'profile picture' ?>">
                     </a>
                 </div>
                 <a class="text-white" href="">
@@ -43,7 +43,7 @@
                     <li><a href="?controller=alumno&action=main">ALUMNOS</a></li>
                     <li><a href="?controller=asignatura&action=main">ASIGNATURAS</a></li>
                     <?php if ( $_SESSION['user']->role_id < 1 ) : ?>
-                    <li><a href="?controller=usuario&action=main">USUARIOS</a></li>
+                        <li><a href="?controller=usuario&action=main">USUARIOS</a></li>
                     <?php endif; ?>
                 </ul>
             </div>

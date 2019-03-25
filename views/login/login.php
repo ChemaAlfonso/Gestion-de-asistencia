@@ -9,10 +9,10 @@
                 <div class="card-body">
                     <h5 class="card-title text-primary">Iniciar sesión</h5>
                     <p class="card-text">Introduce tus credenciales para iniciar sesión!</p>
-                    <form action="index.php?controller=login&action=login" method="POST">
+                    <form action="index.php?controller=login&action=main" method="POST">
 
                         <div class="form-group">
-                            <label for="nickname">Usuario</label>
+                            <label for="nickname">Usuario / Email</label>
                             <input type="text" class="form-control" name="nickname"  value="<?= !empty($_COOKIE['userLogin']) ? $_COOKIE['userLogin'] : '';  ?>" >
                         </div>
 

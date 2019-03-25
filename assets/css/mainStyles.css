@@ -67,9 +67,7 @@ a:hover{
 }
 
 .circulo img{
-    height: 50px;
-    min-width: 50px;
-    margin: auto;
+    height: 100%;
 }
 
 .circulo:hover,
@@ -79,18 +77,6 @@ a:hover{
     cursor: pointer;
     border-radius: 8px;
     transform: scale(1.2);
-}
-
-.circuloGrande img{
-    height: 80px;
-    min-width: 80px;
-
-}
-
-.circuloExtraGrande img{
-    height: 120px;
-    min-width: 120px;
-
 }
 
 /***************************

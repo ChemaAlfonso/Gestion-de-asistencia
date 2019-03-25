@@ -41,7 +41,7 @@
              <!-- OFF -->
             <div class="row end">
                 <div class="col-12">
-                    <a class="text-danger" href="index.php?logOut=true"> 
+                    <a class="text-danger" href="index.php?logOut=true" title="Salir"> 
                         <p class="fas fa-power-off display-4"></p>
                     </a>
                 </div>

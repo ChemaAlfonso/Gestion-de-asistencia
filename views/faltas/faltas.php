@@ -17,7 +17,7 @@
             <tr scope=row>
                 <td class=" align-middle">
                     <a href="index.php?controller=falta&action=edit&idAlum=<?= $fila->alumno_id; ?>&idAsig=<?= $fila->asignatura_id; ?>&dia=<?= $fila->dia; ?>">
-                        <div class="circulo">
+                        <div class="circulo d-flex justify-content-center">
                             <img src="<?= $fila->fotoAlumno; ?>" alt="<?= $fila->nombreAlumno; ?>" title="<?= $fila->nombreAlumno; ?>">
                         </div>
                     </a>

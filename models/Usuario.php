@@ -33,13 +33,14 @@ class Usuario extends Db{
     {
         if ( $this->seleccionar("SELECT * FROM usuarios WHERE id = $id") )
         {
+            $this->id            = $this->filas[0]->id;
             $this->nombre        = $this->filas[0]->nombre;
             $this->nickname      = $this->filas[0]->nickname;
             $this->apellidos     = $this->filas[0]->apellidos;
             $this->email         = $this->filas[0]->email;
             $this->password      = $this->filas[0]->password;
             $this->favoritos     = $this->filas[0]->favoritos;
-            $this->role          = $this->filas[0]->role;
+            $this->role          = $this->filas[0]->role_id;
             $this->img           = $this->filas[0]->img;
 
             return true;
@@ -77,7 +78,7 @@ class Usuario extends Db{
                                     email       = '$this->email', 
                                     password    = '$this->password',
                                     favoritos   = '$this->favoritos',
-                                    role        = '$this->role', 
+                                    role_id     = '$this->role', 
                                     img         = '$this->img' 
                 WHERE id = $this->id;";
 

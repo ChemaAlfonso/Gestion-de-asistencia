@@ -12,30 +12,33 @@ require_once 'autoload.php';
 require_once 'views/shared/header.php'; 
 
      //Si cerramos sesion
-     if ( isset( $_GET['logOut'] ) )
+     if ( isset( $_GET['logOut'] ) ){
           $_SESSION['user'] = null;
+          unset( $_SESSION['user'] );
+     }
 
      //Si esta registrado
-
 if ( !empty( $_SESSION['user'] ) ){
 
      $usr = filter_var( $_SESSION['user'], FILTER_SANITIZE_STRING );
 
      /* Seteo de la cookie de sesion si se requiere */
-     if ( isset( $usr ) && isset( $_SESSION['recordar'] ) ){
+     if ( isset( $_GET['recordar'] ) ){
           
-          if ( $_SESSION['recordar'] === true ){
+
+          
+          if ( $_GET['recordar'] == true ){
      
                setcookie("userLogin",$usr, $_SESSION['logstart']+604800);
      
-          } elseif ( $_SESSION['recordar'] === false )  {
+          } elseif ( $_GET['recordar'] == false )  {
      
                setcookie("userLogin",$usr, $_SESSION['logstart']-604800);
                unset( $_COOKIE['userLogin'] );
      
           }
           
-          unset( $_SESSION['recordar'] );
+          unset( $_GET['recordar'] );
           
      }    
 
