@@ -1,5 +1,6 @@
 <?php
 
+require_once 'mainController.php';
 require_once 'models/Login.php';
 
 class LoginController extends MainController{

@@ -1,7 +1,7 @@
 <div class="container-fluid">
 
     <div class="row vh-100 align-items-center">
-        <div class="col-4 offset-4">
+        <div class="col-lg-4 col-12 offset-lg-4">
 
             <div class="card">
 
@@ -22,7 +22,7 @@
                         </div>
 
                         <div class="form-row">
-                            <div class="col-4">
+                            <div class="col-lg-4">
 
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
@@ -37,10 +37,10 @@
                         </div>
 
                         <div class="form-row">
-                            <div class="col-3">
+                            <div class="col-lg-3 col-md-6">
                                 <input type="submit" class="btn btn-primary" value="Iniciar sesión" />
                             </div>
-                            <div class="col-7 offset-2 mt-2">
+                            <div class="col-lg-7 col-md-6 offset-lg-2 mt-2">
                                 <a href="index.php?reg=true">¿ Aun no tienes cuenta ? Registrate...</a>
                             </div>
                         </div>

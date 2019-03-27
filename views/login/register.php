@@ -1,7 +1,7 @@
 <div class="container-fluid">
 
     <div class="row vh-100 align-items-center">
-        <div class="col-4 offset-4">
+        <div class="col-lg-4 offset-lg-4">
 
             <div class="card">
 
@@ -58,11 +58,11 @@
 
                         <div class="form-row mt-3">
 
-                            <div class="col-3">
+                            <div class="col-lg-3 col-md-6">
                                 <input type="submit" class="btn btn-primary" value="Registrarse" />
                             </div>
 
-                            <div class="col-7 offset-2 mt-3">
+                            <div class="col-lg-7 col-md-6 offset-lg-2 mt-3">
                                 <a href="index.php">¿ Ya tienes cuenta ? Iniciar sesión...</a>
                             </div>
 
