@@ -175,6 +175,10 @@ header p{
     margin: auto;
 }
 
+tr{
+    transition: all .5s;
+}
+
 tr:hover{
     background-color: #343a40;
     color: #fff;

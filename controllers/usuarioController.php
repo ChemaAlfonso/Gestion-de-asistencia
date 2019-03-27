@@ -21,13 +21,7 @@ class UsuarioController{
 
         require_once 'views/usuarios/crear.php';
     }
-/*
-    public function edit(){
-
-
-        require_once 'views/usuarios/crear.php';
-    }
-*/
+    
     /*************************
      *  Creación / Edicion
      *************************/
@@ -61,8 +55,7 @@ class UsuarioController{
             
             $usuario->img = $img;
 
-        }
-        
+        }        
 
         if ( !isset( $_GET['edit'] ) ){
 
@@ -133,19 +126,18 @@ class UsuarioController{
 
         $fileExt = substr( $_FILES['img']['name'], ( strlen( $_FILES['img']['name'] ) -4 ) );
 
-        $path = 'assets/img/usuarios/';
+        $path            = 'assets/img/users/';
         $simpleDestRoute =  $path . $dir . '/profile';
-        $destRoute =  $path . $dir . '/profile' . $fileExt ;
-        $file = $_FILES['img']['tmp_name'];
+        $destRoute       =  $simpleDestRoute . $fileExt ;
+        $file            = $_FILES['img']['tmp_name'];
         
         if ( !is_dir( $path. $dir ) ){
-            mkdir("assets/img/usuarios/$dir");
+            mkdir("assets/img/users/$dir");
         }
 
         if ( is_file( $tempFile = ($simpleDestRoute . '.jpg')) || is_file( $tempFile = ($simpleDestRoute . '.png')) || is_file( $tempFile = ($simpleDestRoute . '.gif')) ){
             unlink( $tempFile );
         }
-
 
         if ( move_uploaded_file( $file,$destRoute ) ){
             return $destRoute;

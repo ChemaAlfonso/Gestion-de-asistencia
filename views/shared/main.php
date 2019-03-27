@@ -4,18 +4,15 @@
     <!-- Big container 3 -->
     <div class="container-fluid">
 
-        <?php 
 
-            $router = new Router();
-            $router->setredirect();
-            $breadcrums = $router->getBreadcrums();
+        <?php 
+            require_once 'router.php';
 
             /* Breadcrums */
             require_once 'views/shared/breadcrums.php';
-
+            
             /* Main Title */
             require_once 'views/shared/mainTitle.php';
-
         ?> 
 
         <!-- Pages -->

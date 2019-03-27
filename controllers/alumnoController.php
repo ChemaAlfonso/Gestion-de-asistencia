@@ -17,14 +17,12 @@ class AlumnoController{
         $alm = new Alumno();
         $alm->Alumnos();
 
-        $falta = new Falta();
-        
+        $falta = new Falta();        
 
         require_once 'views/alumnos/alumnos.php';
     }
 
     public function crear(){
-
 
             require_once 'views/alumnos/crear.php';
 
@@ -49,13 +47,10 @@ class AlumnoController{
         if  ( !empty($_FILES['img']['name']) ){
             
             $img = $_FILES['img']['name'];
-
-
             
             $img = $this->saveImg( $nombre, $matricula );
             
             $alumno->img = $img;
-
 
         }
         
@@ -103,7 +98,7 @@ class AlumnoController{
 
     public function edit(){
 
-        $alumno_id = filter_var($_GET['id'], FILTER_SANITIZE_NUMBER_INT);
+        $alumno_id = filter_var( $_GET['id'], FILTER_SANITIZE_NUMBER_INT );
 
         $alumnoEdit = new Alumno();
         $alumnoEdit->AlumnoUnico( $alumno_id );
@@ -114,7 +109,7 @@ class AlumnoController{
 
     public function saveImg( $name, $dir ){
 
-        $fileExt = substr( $_FILES['img']['name'], ( strlen( $_FILES['img']['name'] ) -4 ) );
+        $fileExt = substr( $_FILES['img']['name'], ( strlen( $_FILES['img']['name'] ) - 4 ) );
 
         $path = 'assets/img/alumnos/';
         $simpleDestRoute =  $path . $dir . '/profile';
@@ -126,7 +121,7 @@ class AlumnoController{
             mkdir("assets/img/alumnos/$dir");
         }
 
-        if ( is_file( $tempFile = ($simpleDestRoute . '.jpg')) || is_file( $tempFile = ($simpleDestRoute . '.png')) || is_file( $tempFile = ($simpleDestRoute . '.gif')) ){
+        if ( is_file( $tempFile = ($simpleDestRoute . '.jpg') ) || is_file( $tempFile = ($simpleDestRoute . '.png') ) || is_file( $tempFile = ($simpleDestRoute . '.gif') ) ){
             unlink( $tempFile );
         }
 
@@ -149,7 +144,7 @@ class AlumnoController{
 
      public function remove()
      {
-        $id =  filter_var($_GET['id'], FILTER_SANITIZE_NUMBER_INT);
+        $id =  filter_var( $_GET['id'], FILTER_SANITIZE_NUMBER_INT );
 
         $alumno = new Alumno();
 

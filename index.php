@@ -7,38 +7,35 @@ require_once 'models/Router.php';
       
 require_once 'autoload.php';
 
-
 /* Header */
 require_once 'views/shared/header.php'; 
 
-     //Si cerramos sesion
-     if ( isset( $_GET['logOut'] ) ){
-          $_SESSION['user'] = null;
-          unset( $_SESSION['user'] );
-     }
+//Si cerramos sesion
+if ( isset( $_GET['logOut'] ) ){
+     $_SESSION['user'] = null;
+     unset( $_SESSION );
+}
 
-     //Si esta registrado
+//Si esta registrado
 if ( !empty( $_SESSION['user'] ) ){
 
-     $usr = filter_var( $_SESSION['user'], FILTER_SANITIZE_STRING );
+     $usr = $_SESSION['user'];
 
      /* Seteo de la cookie de sesion si se requiere */
-     if ( isset( $_GET['recordar'] ) ){
+     if ( isset( $_SESSION['recordar'] ) ){   
           
-
-          
-          if ( $_GET['recordar'] == true ){
+          if ( $_SESSION['recordar'] == true ){
      
-               setcookie("userLogin",$usr, $_SESSION['logstart']+604800);
+               setcookie("userLogin",$usr->nickname, $_SESSION['logstart']+604800);
      
-          } elseif ( $_GET['recordar'] == false )  {
+          } elseif ( $_SESSION['recordar'] == false )  {
      
-               setcookie("userLogin",$usr, $_SESSION['logstart']-604800);
+               setcookie("userLogin",$usr->nickname, $_SESSION['logstart']-604800);
                unset( $_COOKIE['userLogin'] );
      
           }
-          
-          unset( $_GET['recordar'] );
+
+          unset( $_SESSION['recordar'] );
           
      }    
 
@@ -47,26 +44,25 @@ if ( !empty( $_SESSION['user'] ) ){
      /* End 1st Big col */
 
      /* 2nd Big col (Aside)*/
-          require_once 'views/shared/aside.php'; 
+     require_once 'views/shared/aside.php'; 
      /* End 2nd Big col */
 
      /* 3rd Big col (Main Content) */
-          require_once 'views/shared/main.php'; 
+     require_once 'views/shared/main.php'; 
      /* End big container 3 */
 
 
-} else {
-     
-     //Si no esta registrado
+//Si no esta registrado
+} else {    
+
+     $_GET['controller'] = 'login';
 
      if ( !empty( $_GET['reg'] ) ){
-
-          $_GET['controller'] = 'login';
+          
           $_GET['action'] = 'register';
           
      } else {
 
-          $_GET['controller'] = 'login';
           $_GET['action'] = 'main';
           
      }
