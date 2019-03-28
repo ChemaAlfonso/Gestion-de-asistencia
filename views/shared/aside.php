@@ -1,4 +1,4 @@
-<div class="col-lg-2 col-md-3 text-white text-center sidebar py-3  vh-lg-100">
+<div class="col-lg-2 col-md-3 text-white text-center sidebar py-3  vh-100">
     <div class="container-fluid">
 
         <!-- Logo -->

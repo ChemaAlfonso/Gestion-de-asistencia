@@ -179,11 +179,6 @@ tr{
     transition: all .5s;
 }
 
-tr:hover{
-    background-color: #343a40;
-    color: #fff;
-}
-
 .card:hover{
     border: 1px solid #ffc107;
 }

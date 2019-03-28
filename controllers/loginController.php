@@ -1,5 +1,6 @@
 <?php
 
+require_once 'models/Router.php';
 require_once 'mainController.php';
 require_once 'models/Login.php';
 
@@ -25,13 +26,19 @@ class LoginController extends MainController{
 
             if ( $this->checkAuth() ){
 
-                $_SESSION['user'] = $login;
+                unset( $_SESSION['error'] );
+                
+                //Reseteo de cabeceras
+                unset( $_GET );
+                
+                header("location:index.php");
+                
                 
             } else {
                 $_SESSION['error'] = 'Error al inicar sesion';
+                require_once 'views/login/login.php';
             }
 
-            require_once 'views/login/login.php';
 
         }
 
@@ -78,11 +85,12 @@ class LoginController extends MainController{
             }
 
             $_SESSION['contador'] = 0;
-            header("location:index.php?recordar=true");
+            return true;
         }
         else
         {
             $_SESSION['error'] = 'Datos de inicio de sesión incorrectos';
+            return false;
         }
 
     }
