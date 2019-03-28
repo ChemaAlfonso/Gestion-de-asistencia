@@ -157,5 +157,24 @@ class AlumnoController{
 
 
      }
+     
+    
+    /*************************
+     *        Busqueda
+     *************************/
+
+    public function search()
+    {
+       $search =  filter_var( $_POST['search'], FILTER_SANITIZE_STRING );
+
+       $result = new Alumno();       
+       $falta = new Falta();
+
+       $result->search( $search );
+
+       require_once 'views/alumnos/search.php';
+
+
+    }
 
 }

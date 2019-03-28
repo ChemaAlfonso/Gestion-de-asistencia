@@ -66,5 +66,12 @@ class Alumno extends Db{
         return $this->seleccionar( $sql );
     }
 
+    public function search( $search )
+    {
+        $sql = "SELECT * from alumnos WHERE nombre LIKE '%$search%' OR apellidos  LIKE '%$search%' OR matricula LIKE '%$search%' ORDER BY nombre ASC";
+
+        return $this->seleccionar( $sql );
+    }
+
 
 }

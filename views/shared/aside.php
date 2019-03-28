@@ -19,7 +19,7 @@
         <div class="row">
             <div class="col-12 search">
 
-                <form action="?controller=search&action=main">
+                <form action="?controller=alumno&action=search" method="POST">
                     <div class="form-group">
                         <label for="search"></label>
                         <div class="input-group">
