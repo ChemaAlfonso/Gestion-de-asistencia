@@ -61,5 +61,13 @@ class Asignatura extends Db{
                 WHERE id = $this->id;";
 
         return $this->ejecutar( $sql );
+    }    
+
+    public function ultimasignatura()
+    {
+        $sql = "SELECT * from asignaturas ORDER BY codigo DESC LIMIT 1";
+
+        return $this->seleccionar( $sql );
     }
+
 }

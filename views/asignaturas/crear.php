@@ -29,12 +29,7 @@
                 <form action="<?= isset($asignaturaEdit) ? "index.php?controller=asignatura&action=create&edit=true" :"index.php?controller=asignatura&action=create"?>" method="POST" enctype="multipart/form-data">
 
                     <div class="form-row">
-
-                        <div class="col">
-                            <label for="codigo">Codigo</label>
-                            <input class="form-control" name="codigo" type="text" value="<?= isset($asignaturaEdit) ? $asignaturaEdit->filas[0]->codigo : '' ?>" required>
-                        </div>
-
+                    
                             <input name="id" type="hidden" value="<?= isset($asignaturaEdit) ? $asignaturaEdit->filas[0]->id : '' ?>">
 
                         <div class="col">

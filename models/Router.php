@@ -56,7 +56,7 @@ class Router{
                 // Breadcrum cases ( TEMP )
                 switch ($action){
                     case 'search':
-                        $action = 'Búsqueda';
+                        $action = 'Coincidencias';
                         break;
 
                     case 'edit':

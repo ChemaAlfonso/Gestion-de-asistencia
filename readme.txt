@@ -1,5 +1,12 @@
 ## Ultimos cambios
 
+- Fix redirect al loguear
+- Añadida busqueda por alumnos
+
+## Versiones anteriores
+
+********************
+
 - unauthorized error.
 - Usuarios editar y borrar funcionales.
 - Pagina de login y registro.
@@ -8,8 +15,6 @@
 - Avances en responsive para md.
 - Animaciones de hover para tarjetas.
 
-
-## Versiones anteriores
 
 ********************
 

@@ -47,13 +47,25 @@ class AlumnoController{
         $alumno->matricula = $alumno->filas[0]->matricula + 1;        
         $matricula         = $alumno->matricula;
         
-        if  ( !empty($_FILES['img']['name']) ){
+        if  ( !empty($_FILES['img']['name'] ) ){
             
             $img = $_FILES['img']['name'];
             
             $img = $this->saveImg( $nombre, $matricula );
             
             $alumno->img = $img;
+
+        } else{
+            
+            $destRoute =  'assets/img/alumnos/' . $matricula;
+
+            if ( !is_dir( $destRoute ) ){
+            
+                $img = 'assets/img/alumnos/profile/profile.jpg';
+                
+                $alumno->img = $img;
+
+            }
 
         }
         
@@ -96,7 +108,6 @@ class AlumnoController{
 
         return;
 
-
     }
 
     public function edit(){
@@ -108,7 +119,6 @@ class AlumnoController{
 
         require_once 'views/alumnos/crear.php';
     }
-
 
     public function saveImg( $name, $dir ){
 
@@ -154,7 +164,6 @@ class AlumnoController{
         $alumno->remove( $id );
 
         $this->main();
-
 
      }
      

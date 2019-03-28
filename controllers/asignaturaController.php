@@ -41,7 +41,6 @@ class AsignaturaController{
 
     public function create(){
 
-        $codigo      = filter_var( $_POST['codigo'], FILTER_SANITIZE_STRING );
         $nombre   = filter_var( $_POST['nombre'], FILTER_SANITIZE_STRING );
         $horas   = filter_var( $_POST['horas'], FILTER_SANITIZE_STRING );
         $curso   = filter_var( $_POST['curso'], FILTER_SANITIZE_STRING );
@@ -49,9 +48,13 @@ class AsignaturaController{
 
         $asignatura = new Asignatura();
         $asignatura->nombre    = $nombre;
-        $asignatura->codigo = $codigo;
         $asignatura->horas = $horas;
         $asignatura->curso = $curso;
+
+        /* Codigo automatico con ultimo valor */
+        $asignatura->ultimasignatura();
+        $asignatura->codigo = $asignatura->filas[0]->codigo + 1;        
+        $codigo             = $asignatura->codigo;
         
         if  ( !empty($_FILES['img']['name']) ){
             
@@ -62,8 +65,19 @@ class AsignaturaController{
 
             $asignatura->img = $img;
 
-        }
-        
+        } else {
+            
+            $destRoute =  'assets/img/asignaturas/' . $codigo;
+
+            if ( !is_dir( $destRoute ) ){
+            
+                $img = 'assets/img/asignaturas/profile/profile.jpg';
+                
+                $asignatura->img = $img;
+
+            }
+
+        }        
 
         if ( !isset( $_GET['edit'] ) ){
 
@@ -103,11 +117,7 @@ class AsignaturaController{
 
         return;
 
-
-    }
-
-    
-
+    }   
 
     public function saveImg( $name, $dir ){
 
