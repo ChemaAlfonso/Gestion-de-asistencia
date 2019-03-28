@@ -13,7 +13,7 @@
 
                     <?php foreach($almnTop->filas as $almnTopOne):?>
 
-                        <div class="col-6">
+                        <div class="col-lg-6 col-12">
                             <div class="p-2">
                                 <h5 class="font-weight-bold text-primary">Alumnos con más faltas</h5>
                                 <p class="font-weight-bold font-italic">Nombre: <span class="font-weight-normal font-normal"><?= $almnTopOne->nombre ?> </span></p>
@@ -22,7 +22,7 @@
                             </div>
                         </div>
 
-                        <div class="col-6">
+                        <div class="col-lg-6 col-12">
                             <a href="index.php?controller=alumno&action=edit&id=<?= $almnTopOne->id; ?>">
                                 <div class="circulo circuloExtraGrande mt-4 d-flex justify-content-center">
                                     <img src="<?= $almnTopOne->img ?>" alt="<?= $almnTopOne->nombre ?>" title="<?= $almnTopOne->nombre . ' ' . $almnTopOne->apellidos ?>">
@@ -34,13 +34,13 @@
                     </div>
 
                     <!-- miniaturas -->
-                    <div class="row justify-content-center mt-5">
+                    <div class="row justify-content-center my-5">
 
                     <?php foreach($alumnos as $falton):?>
 
                         <?php $alumno->AlumnoUnico( $falton ); ?>
                         
-                        <div class="col-3">
+                        <div class="col-lg-3 col-6">
                             <a href="index.php?controller=alumno&action=edit&id=<?= $alumno->id; ?>">
                                 <div class="circulo circuloGrande d-flex justify-content-center">
                                     <img src="<?= $alumno->img ?>" alt="<?= $alumno->nombre ?>" title="<?= $alumno->nombre . ' ' . $alumno->apellidos ?>">
@@ -64,7 +64,7 @@
 
                     <?php foreach($asignTop->filas as $asignTopOne):?>
 
-                        <div class="col-6">
+                        <div class="col-lg-6 col-12">
                             <div class="p-2">
                                 <h5 class="font-weight-bold text-primary">Asignaturas más faltadas</h5>
                                 <p class="font-weight-bold font-italic">Nombre: <span class="font-weight-normal font-normal"><?= $asignTopOne->nombre ?> </span></p>
@@ -73,7 +73,7 @@
                             </div>
                         </div>
 
-                        <div class="col-6">
+                        <div class="col-lg-6 col-12">
                             <a href="index.php?controller=asignatura&action=edit&id=<?= $asignTopOne->id; ?>">
                                 <div class="circulo circuloExtraGrande mt-4 d-flex justify-content-center">
                                     <img src="<?= $asignTopOne->img ?>" alt="<?= $asignTopOne->nombre ?>" title="<?= $asignTopOne->nombre . ' - ' . $asignTopOne->codigo ?>">
@@ -90,7 +90,7 @@
                     <?php foreach($asignaturas as $faltada):?>
                         <?php $asignatura->AsignaturaUnica( $faltada ); ?>
                         
-                        <div class="col-3">
+                        <div class="col-lg-3 col-6">
                             <a href="index.php?controller=asignatura&action=edit&id=<?= $asignatura->id; ?>">
                                 <div class="circulo circuloGrande d-flex justify-content-center">
                                     <img src="<?= $asignatura->img ?>" alt="<?= $asignatura->nombre ?>" title="<?= $asignatura->nombre . ' - ' . $asignatura->codigo ?>">
@@ -118,7 +118,7 @@
 
                     <?php foreach($almnTopRand->filas as $almnTopRandOne):?>
 
-                        <div class="col-6">
+                        <div class="col-lg-6 col-12">
                             <div class="p-2">
                                 <h5 class="font-weight-bold text-primary">Alumno aleatorio</h5>
                                 <p class="font-weight-bold font-italic">Nombre: <span class="font-weight-normal font-normal"><?= $almnTopRandOne->nombre ?> </span></p>
@@ -127,7 +127,7 @@
                             </div>
                         </div>
 
-                        <div class="col-6">
+                        <div class="col-lg-6 col-12">
                             <a href="index.php?controller=alumno&action=edit&id=<?= $almnTopRandOne->id; ?>">
                                 <div class="circulo circuloExtraGrande mt-4 d-flex justify-content-center">
                                     <img src="<?= $almnTopRandOne->img ?>" alt="<?= $almnTopRandOne->nombre ?>" title="<?= $almnTopRandOne->nombre . ' ' . $almnTopRandOne->apellidos ?>">
@@ -146,7 +146,7 @@
                         
                     <?php $alumnoRand->AlumnoUnico( $faltonRand ); ?>
                         
-                        <div class="col-3">
+                        <div class="col-lg-3 col-6">
                             <a href="index.php?controller=alumno&action=edit&id=<?= $alumnoRand->id; ?>">
                                 <div class="circulo circuloGrande d-flex justify-content-center">
                                     <img src="<?= $alumnoRand->img ?>" alt="<?= $alumnoRand->nombre ?>" title="<?= $alumnoRand->nombre . ' ' . $alumnoRand->apellidos ?>">
@@ -170,7 +170,7 @@
 
                     <?php foreach($asignTopRand->filas as $asignTopRandOne):?>
 
-                        <div class="col-6">
+                        <div class="col-lg-6 col-12">
                             <div class="p-2">
                                 <h5 class="font-weight-bold text-primary">Asignatura aleatoria</h5>
                                 <p class="font-weight-bold font-italic">Nombre: <span class="font-weight-normal font-normal"><?= $asignTopRandOne->nombre ?> </span></p>
@@ -179,7 +179,7 @@
                             </div>
                         </div>
 
-                        <div class="col-6">
+                        <div class="col-lg-6 col-12">
                             <a href="index.php?controller=asignatura&action=edit&id=<?= $asignTopRandOne->id; ?>">
                                 <div class="circulo circuloExtraGrande mt-4 d-flex justify-content-center">
                                     <img src="<?= $asignTopRandOne->img ?>" alt="<?= $asignTopRandOne->nombre ?>" title="<?= $asignTopRandOne->nombre . ' - ' . $asignTopRandOne->codigo ?>">
@@ -197,7 +197,7 @@
 
                         <?php $asignaturaRand->AsignaturaUnica( $faltadaRand ); ?>
                         
-                        <div class="col-3">
+                        <div class="col-lg-3 col-6">
                             <a href="index.php?controller=asignatura&action=edit&id=<?= $asignaturaRand->id; ?>">
                                 <div class="circulo circuloGrande d-flex justify-content-center">
                                     <img src="<?= $asignaturaRand->img ?>" alt="<?= $asignaturaRand->nombre ?>" title="<?= $asignaturaRand->nombre . ' - ' . $asignaturaRand->codigo ?>">

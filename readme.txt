@@ -6,6 +6,8 @@
 - Matricula autoincremental para alumnos.
 - Imagenes predefinidas para alumnos y asignaturas sin imagen.
 
+* ( .htaccess no funcional )
+
 ## Versiones anteriores
 
 ********************
@@ -30,7 +32,7 @@
 
 ********************
 
-- Retoques visuales panes principal.
+- Retoques visuales panel principal.
 - Faltas por horas en la vista de alumnos.
 - Enlaces en thumbnails a perfil .
 - Animaciones de hover para circulos.

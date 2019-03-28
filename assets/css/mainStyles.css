@@ -38,6 +38,12 @@ a:hover{
     background: #212124;
 }
 
+.hidden{
+    position: absolute;
+    top: 15vh;
+    left: -5em;
+}
+
 /* Circulos */
 
 .circulo,
@@ -94,6 +100,12 @@ header p{
 /***************************
            Aside 
 ****************************/
+
+
+.favContainer,
+.sideContainer{
+        height: 100vh;
+}
 
 .profile,
 .fav{
@@ -161,6 +173,7 @@ header p{
 /***************************
           MISC 
 ****************************/
+
 .copy{
     position: absolute;
     bottom: 0;
@@ -184,7 +197,120 @@ tr{
 }
 .fa-star:hover{
     transition: all .5s;
-}
-.fa-star:hover{
     transform: rotateY(360deg);
 }
+
+
+/***************************
+         Media @ Md 
+****************************/
+
+@media (max-width: 991.98px){
+
+    *{
+        font-size: .95rem;
+    }
+
+    /* favs */
+
+    .favContainer{
+        height: 10vh;
+
+    }
+
+    /* aside */
+    .sideContainer{
+        height: 30vh;
+    }
+    .sidebar{
+        height: 20vh;
+    }
+    
+    #favLogoText::after{
+        display: none;
+
+    }
+
+    /* aside/nav */
+    .mainLinksContainer{
+        display: flex;
+        margin-top: 1%;
+    }
+
+    .mainLinksContainer ul{
+        margin: auto;
+    }
+
+    .mainLinksContainer ul li{
+        float: left;
+        margin-right: 1em ;
+    }
+
+    
+    /* Circulos */
+
+    .circuloExtraGrande{
+        width: 80px;
+        height: 80px;
+
+    }
+
+    /* MISC */
+
+    .copy{
+        bottom: -.5em;
+    }
+
+    .end{
+        position: absolute;
+        top: 2vh;
+        left: 88vw;
+        right: 0;
+    }
+    
+}
+
+
+/***************************
+         Media @ Sm 
+****************************/
+
+@media (max-width: 767.98px) {
+    
+
+    /* favs */
+
+    .favContainer{
+        height: 12vh;
+        overflow-x: scroll;
+
+    }
+
+    /* aside/nav */
+    
+    .logoHeader{
+        display: none;
+    }
+
+    .mainLinksContainer{
+        display: flex;
+        margin-top: 1%;
+    }
+
+    .mainLinksContainer ul{
+        margin: auto;
+    }
+
+    .mainLinksContainer ul li{
+        float: left;
+        font-size: .9rem;
+        margin-right: .8em ;
+    }
+    
+    /* MISC */
+
+    .copy{
+        bottom: .5em;
+    }
+
+ }

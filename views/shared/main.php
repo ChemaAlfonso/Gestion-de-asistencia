@@ -1,5 +1,5 @@
 <!-- Big col 3 -->
-<div class="col-lg-9 col-md-9  blackBg mainBody py-3 vh-100 overflow-auto bg-white">
+<div class="col-lg-9 col-md-12  blackBg mainBody py-3 vh-100 overflow-auto bg-white mainPages">
 
     <!-- Big container 3 -->
     <div class="container-fluid">
