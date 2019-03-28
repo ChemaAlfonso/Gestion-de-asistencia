@@ -1,7 +1,10 @@
 ## Ultimos cambios
 
-- Fix redirect al loguear
-- Añadida busqueda por alumnos
+- Fix redirect al loguear.
+- Añadida busqueda por alumnos.
+- Codigo autoincremental para asignaturas.
+- Matricula autoincremental para alumnos.
+- Imagenes predefinidas para alumnos y asignaturas sin imagen.
 
 ## Versiones anteriores
 
