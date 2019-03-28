@@ -28,11 +28,7 @@ class LoginController extends MainController{
 
                 unset( $_SESSION['error'] );
                 
-                //Reseteo de cabeceras
-                unset( $_GET );
-                
-                header("location:index.php");
-                
+                echo "<script> window.location='index.php'; </script>";
                 
             } else {
                 $_SESSION['error'] = 'Error al inicar sesion';
