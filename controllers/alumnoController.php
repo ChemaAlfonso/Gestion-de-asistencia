@@ -36,13 +36,16 @@ class AlumnoController{
 
         $nombre      = filter_var( $_POST['nombre'], FILTER_SANITIZE_STRING );
         $apellidos   = filter_var( $_POST['apellidos'], FILTER_SANITIZE_STRING );
-        $matricula   = filter_var( $_POST['matricula'], FILTER_SANITIZE_STRING );
         
 
         $alumno = new Alumno();
         $alumno->nombre    = $nombre;
         $alumno->apellidos = $apellidos;
-        $alumno->matricula = $matricula;
+        
+        /* Matricula automatica con ultimo valor */
+        $alumno->ultimoAlumno();
+        $alumno->matricula = $alumno->filas[0]->matricula + 1;        
+        $matricula         = $alumno->matricula;
         
         if  ( !empty($_FILES['img']['name']) ){
             

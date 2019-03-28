@@ -58,4 +58,13 @@ class Alumno extends Db{
 
         return $this->ejecutar( $sql );
     }
+
+    public function ultimoAlumno()
+    {
+        $sql = "SELECT * from alumnos ORDER BY matricula DESC LIMIT 1";
+
+        return $this->seleccionar( $sql );
+    }
+
+
 }

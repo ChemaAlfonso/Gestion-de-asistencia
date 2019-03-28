@@ -42,12 +42,7 @@
 
                     </div>
 
-                    <div class="form-group">
-                        <label for="matricula">Matricula</label>
-                        <input class="form-control" name="matricula" type="text" value="<?= isset($alumnoEdit) ? $alumnoEdit->filas[0]->matricula : '' ?>" required>
-                    </div>
-
-                    <div class="custom-file">
+                    <div class="custom-file mt-3">
                         <input type="file" class="custom-file-input" name="img" value="<?= isset($alumnoEdit) ? $alumnoEdit->filas[0]->img : '' ?>" id="img">
                         <label class="custom-file-label" for="img">Elija una imagen...</label>
                     </div>
