@@ -2,21 +2,6 @@
 
 session_start();
 
-//Modulo de rutas
-require_once 'models/Router.php';
-      
-require_once 'autoload.php';
-
-/* Header */
-require_once 'views/shared/header.php'; 
-
-//Si cerramos sesion
-if ( isset( $_GET['logOut'] ) ){
-     $_SESSION['user'] = null;
-     unset( $_SESSION );
-}
-
-//Si esta registrado
 if ( !empty( $_SESSION['user'] ) ){
 
      $usr = $_SESSION['user'];
@@ -37,7 +22,25 @@ if ( !empty( $_SESSION['user'] ) ){
 
           unset( $_SESSION['recordar'] );
           
-     }    
+     }
+}
+
+//Modulo de rutas
+require_once 'models/Router.php';
+      
+require_once 'autoload.php';
+
+/* Header */
+require_once 'views/shared/header.php'; 
+
+//Si cerramos sesion
+if ( isset( $_GET['logOut'] ) ){
+     $_SESSION['user'] = null;
+     unset( $_SESSION );
+}
+
+//Si esta registrado
+if ( !empty( $_SESSION['user'] ) ){    
 
      /* 1st Big col (FAVS) */
      require_once 'views/shared/favs.php'; 
