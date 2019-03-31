@@ -2,11 +2,17 @@
 
 session_start();
 
+//Si cerramos sesion
+if ( isset( $_GET['logOut'] ) ){
+     $_SESSION['user'] = null;
+     unset( $_SESSION );
+}
+
+/* Seteo de la cookie de sesion si se requiere */
 if ( !empty( $_SESSION['user'] ) ){
 
      $usr = $_SESSION['user'];
 
-     /* Seteo de la cookie de sesion si se requiere */
      if ( isset( $_SESSION['recordar'] ) ){   
           
           if ( $_SESSION['recordar'] == true ){
@@ -16,13 +22,13 @@ if ( !empty( $_SESSION['user'] ) ){
           } elseif ( $_SESSION['recordar'] == false )  {
      
                setcookie("userLogin",$usr->nickname, $_SESSION['logstart']-604800);
-               unset( $_COOKIE['userLogin'] );
-     
+               unset( $_COOKIE['userLogin'] );     
           }
 
           unset( $_SESSION['recordar'] );
           
      }
+     
 }
 
 //Modulo de rutas
@@ -32,12 +38,6 @@ require_once 'autoload.php';
 
 /* Header */
 require_once 'views/shared/header.php'; 
-
-//Si cerramos sesion
-if ( isset( $_GET['logOut'] ) ){
-     $_SESSION['user'] = null;
-     unset( $_SESSION );
-}
 
 //Si esta registrado
 if ( !empty( $_SESSION['user'] ) ){    

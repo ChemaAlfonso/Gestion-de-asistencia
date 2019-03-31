@@ -11,9 +11,6 @@
 
 ## Versiones anteriores
 
-
-
-
 ********************
 
 - Inicio del proyecto.
